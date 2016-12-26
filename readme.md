@@ -14,11 +14,18 @@ complete with JavaScript-driven charts and Graphs. No backend required.
 Day 1 : Setup HTML files to structure Page,
 	Added Project to Git,
 	Created Readme.md
+	** ToDo for HTML **
+	1) Add Charts.js
+	2) profile pics for
+	new and recent users
 ================================
-Day 2 :
+12/23/2017
+Day 2 : SCSS Dir added,
+	1) CSS/SCSS Dir added.
+	2) select added
+
 
 ================================
 Day 3 :
 
 ================================
-

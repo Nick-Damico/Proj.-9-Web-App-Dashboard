@@ -7,27 +7,24 @@
         <meta name="description" content="Treehouse Front End Techdegree Project 9 Web App Dashboard">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700" rel="stylesheet">
 
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/app.css">
+
+        <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-        <style>
-          body {
-            background-color: #5f62b3;
-          }
-        </style>
     </head>
     <body>
 
-        <div class="header-container">
-            <header class="wrapper clearfix">
+        <div class="header-container cf">
+            <header class="main-header wrapper cf">
                 <h1 class="title">Your<span>App</span></h1>
-                    <ul class="header-nav-user-profile">
+                    <ul class="header-nav">
                         <li>
                           <a href="#">
-                            Alert
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="alertLink" class="alert-bell-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                             <style type="text/css">
                             	.st0{fill:#020202;}
@@ -46,18 +43,23 @@
                             <img class="profile-pic header-nav-profile-pic" src="images/profile.jpg" alt="Users Profile Picture" />
                           </a>
                       </li>
+                      <li>
+                        <a href="#">
+                          <h2 class="username">Nick Damico</h2>
+                        </a>
+                      </li>
                     </ul>
             </header>
         </div>  <!-- .header-container -->
 
         <div class="app-navigation-container">
-          <nav class="app-navigation app-navigation-links">
-            <ul class="navigation-links">
+          <nav class="app-navigation wrapper cf">
+            <ul class="navigation-list">
 
               <!-- Dashboard Icon Link -->
               <li>
                 <a href="#">
-                  Dashboard Item
+                  Dashboard
                   <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
@@ -80,7 +82,7 @@
 
               <li>  <!-- members link item -->
                 <a href="#">
-                  Members link item
+                  Members
                   <svg version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
@@ -103,7 +105,7 @@
 
               <li>  <!-- Visits link item -->
                 <a href="#">
-                  Visits link item
+                  Visits
                   <svg version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
@@ -124,7 +126,7 @@
 
               <li>  <!-- settings link item -->
                 <a href="#">
-                  Settings link item
+                  Settings
                   <svg version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
@@ -178,18 +180,24 @@
                 <section class="line-chart-traffic-container">
                   <h3 class="section-title">Traffic</h3>
                   <!-- Line chart.js here -->
+                  <!-- Placehold.it img -->
+                  <img src="http://placehold.it/800x350" alt="line graph">
                 </section>
 
                 <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
                 <section class="line-chart-traffic-container">
                   <h3 class="section-title">Daily Traffic</h3>
                   <!-- bar graph chart.js here -->
+                  <!-- Placehold.it img -->
+                  <img src="http://placehold.it/400x350" alt="line graph">
                 </section>
 
                 <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
                 <section class="line-chart-traffic-container">
                   <h3 class="section-title">Daily Traffic</h3>
                   <!-- doughnut graph chart.js here -->
+                  <!-- Placehold.it img -->
+                  <img src="http://placehold.it/400x350" alt="line graph">
                 </section>
 
                 <!-- SOCIAL STATS CONTAINER -->
@@ -202,21 +210,21 @@
                     <!-- TWITTER BLOCK ITEM -->
                     <div class="social-block social-block-twitter">
                       <h4 class="social-block-title">Twitter</h4>
-                      <img class="social-icon" src="icons/icon-twitter.svg" alt="twitter icon">
+                      <!-- <img class="social-icon" src="icons/icon-twitter.svg" alt="twitter icon"> -->
                       <span class="social-stat-count">10,345</span>
                     </div>  <!-- .social-block-twitter -->
 
                     <!-- FACEBOOK BLOCK ITEM -->
                     <div class="social-block social-block-facebook">
                       <h4 class="social-block-title">Facebook</h4>
-                      <img class="social-icon" src="icons/icon-facebook.svg" alt="facebook icon">
+                      <!-- <img class="social-icon" src="icons/icon-facebook.svg" alt="facebook icon"> -->
                       <span class="social-stat-count">18,739</span>
                     </div>  <!-- .social-block-facebook -->
 
                     <!-- GOOGLE+ BLOCK ITEM -->
                     <div class="social-block social-block-google">
                       <h4 class="social-block-title">Google+</h4>
-                      <img class="social-icon" src="icons/icon-google-plus.svg" alt="google-plus icon">
+                      <!-- <img class="social-icon" src="icons/icon-google-plus.svg" alt="google-plus icon"> -->
                       <span class="social-stat-count">2,530</span>
                     </div>  <!-- .social-block-google -->
 
@@ -347,18 +355,19 @@
                       <div class="slider round"></div>
                     </label>
 
+                    <!-- TIME ZONE SELCTION -->
+                    <select id="timezone-select" name="timezone" size="1">
+                      <option selected disabled>Select Timezone</option>
+                      <option>Eastern Standard</option>
+                  </div>
+
                     <button class="settings-btn save-btn btn">Save</button>
                     <button class="settings-btn save-btn btn">Cancel</button>
-                  </div>
 
                 </div>  <!-- .app-settings-container -->
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
 
