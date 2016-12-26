@@ -1,0 +1,87 @@
+.header-container {
+  background: $color-header;
+  height: 60px;
+  position: relative;
+}
+
+.main-header {
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .title,
+  .username {
+    color: $color-app-name;
+    font-family: $stack-primary;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .title {
+    /* 22px / 14px */
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: .4em;
+    & > span, {
+      font-weight: 100;
+    }
+  }
+
+  .username {
+    display: none;
+    font-size: 18px;
+    font-weight: 100;
+    padding-top: .25em;
+
+    @include tablet {
+        display: block;
+    }
+  }
+
+}
+
+
+ul.header-nav {
+  float: right;
+
+  li {
+    float: left;
+    margin-right: 10px;
+
+    &:first-child{
+      border-right: 1px solid black;
+    }
+
+    &:nth-child(2) {
+      @include tablet {
+          margin-right: 0;
+      }
+    }
+
+    &:last-child{
+      margin-right: 0;
+
+      @include tablet {
+        margin-right: 10px;
+      }
+
+    }
+
+    a {
+      padding: 5px 10px;
+    }
+  }
+
+  .alert-bell-icon {
+    width: 22px;
+    /* FIXES VERTICAL ALIGNMENT OF BELL.ICON */
+    padding-top: 5px;
+  }
+
+  .header-nav-profile-pic {
+    border-radius: 50px;
+    width: 32px;
+  }
+
+}
