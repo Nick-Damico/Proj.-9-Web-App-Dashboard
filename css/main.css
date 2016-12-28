@@ -14,7 +14,6 @@ body {
   box-shadow: 0px 3px 9px -1px rgba(44,74,82,1);
 }
 
-
 h1,
 h2,
 h3,
@@ -44,75 +43,223 @@ svg {
   width: 32px;
 }
 
-/*input[attr='placeholder'] {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}*/
-
 
 
 /*****************************************
 RESPONSIVE GRID
 *****************************************/
-[class*='col-'] {
+
+/*  clearfix Apply to all Section div's */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+.cf {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* SECTION */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* col Setup */
+.col {
+  margin: 1% 0 1% 0%;
+}
+
+.col:first-child { margin-left: 0; }
+
+/* mobile-col
+for multi column layout
+on small screen sizes, if a multi col layout is needed on devices w/ 479px or less use .col-moblie instead of .col */
+.col-mobile {
+  display: block;
   float: left;
+  margin: 1% 0 1% 1.6%;
+  padding-left: 1.5%;
 }
 
-[class*='col-'] {
-  padding-right: 1.6%;
-}
-[class*='col-']:last-of-type {
-  padding-right: 0;
+.col-mobile:first-child {
+  margin-left: 0;
 }
 
-.col-2-3 {
-  width: 66.66%;
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (min-width: 480px) {
+  .col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+    padding-left: 1.5%;
+  }
+
 }
 
-.col-1-3 {
-  width: 33.33%;
+/* mobile multi column grid classes, use if a multi column layout is need on 479px or less */
+
+.sm-col-2-12 {
+  width: 15.33%;
 }
 
-.col-full {
+.sm-col-3-12 {
+  width: 23.8%;
+}
+
+.sm-col-4-12 {
+  width: 32.26%;
+}
+
+.sm-col-5-12 {
+  width: 40.73%;
+}
+
+.sm-col-6-12 {
+	width: 49.2%;
+}
+
+.sm-col-7-12 {
+  width: 57.66%;
+}
+
+.sm-col-8-12 {
+  width: 66.13%;
+}
+
+.sm-col-9-12 {
+  width: 74.6%;
+}
+
+.sm-col-10-12 {
+  width: 83.06%;
+}
+
+.sm-col-12-12 {
   width: 100%;
 }
 
-.col-1-2 {
-  width: 50%;
-}
-.col-1-4 {
-  width: 25%;
-}
+/* md size screens */
 
-
-
-
-.wrapper {
-  width: 97.25%;
-  margin: 0 auto;
+.md-col-2-12 {
+  width: 15.33%;
 }
 
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
+.md-col-10-12 {
+  width: 83.06%;
 }
 
 
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+
+/* mobile first grid */
+
+.col-12-12 {
+  width: 100%;
 }
 
-.cf:after {
-    clear: both;
+.col-11-12 {
+	width: 100%;
 }
 
-.cf {
-    *zoom: 1;
+.col-10-12 {
+	width: 100%;
 }
 
+.col-9-12 {
+	width: 100%;
+}
+
+.col-8-12 {
+	width: 100%;
+}
+
+.col-7-12 {
+	width: 100%;
+}
+
+.col-6-12 {
+	width: 100%;
+}
+
+.col-5-12 {
+	width: 100%;
+}
+
+.col-4-12 {
+	width: 100%;
+}
+
+.col-3-12 {
+	width: 100%;
+}
+
+.col-2-12 {
+	width: 100%;
+}
+
+.col-1-12 {
+	width: 100%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (min-width: 480px) {
+
+	.col-12_of_12 {
+		width: 100%;
+	}
+
+	.col-11_of_12 {
+		width: 91.53%;
+	}
+
+	.col-10_of_12 {
+		width: 83.06%;
+	}
+
+	.col-9_of_12 {
+		width: 74.6%;
+	}
+
+	.col-8_of_12 {
+		width: 66.13%;
+	}
+
+	.col-7_of_12 {
+		width: 57.66%;
+	}
+
+	.col-6_of_12 {
+		width: 49.2%;
+	}
+
+	.col-5_of_12 {
+		width: 40.73%;
+	}
+
+	.col-4_of_12 {
+		width: 32.26%;
+	}
+
+	.col-3_of_12 {
+		width: 23.8%;
+	}
+
+	.col-2_of_12 {
+		width: 15.33%;
+	}
+
+	.col-1_of_12 {
+		width: 6.86%;
+	}
+
+}
 
 
 /*****************************************
@@ -120,8 +267,6 @@ HEADER
 *****************************************/
 .main-header{
   background-color: #5e62b3;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .title,
@@ -134,6 +279,7 @@ HEADER
   font-weight: 100;
 }
 
+/* Hide name on mobile */
 .username {
   display: none;
 }
@@ -155,8 +301,9 @@ ul.header-nav li:first-child {
   padding: 0 10px;
 }
 
-.header-nav a:last-child {
-  padding-right: 4px;
+.header-nav a:last-child a {
+  padding-right: 5px;
+  border: 1px solid red;
 }
 
 ul.header-nav svg {
@@ -176,7 +323,6 @@ APP PRIMARY NAVIGATION
 
 .app-navigation-container {
   background: #3b3a5f;
-  height: 48px;
 }
 
 .navigation-list {
@@ -184,13 +330,13 @@ APP PRIMARY NAVIGATION
   flex-direction: row;
   justify-content: center;
   padding-top: .5em;
-  padding-bottom: .25em;
 }
 
 .navigation-list li {
   border-bottom: 4px solid #3b3a5f;
-  transition: border-color.4s ease-in;
-  flex-grow: 2;
+  transition: border-color .4s ease-in;
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
 .navigation-list li:hover,
@@ -199,12 +345,12 @@ APP PRIMARY NAVIGATION
 }
 
 .navigation-list li a {
-  padding: 0 10px;
+  padding: 0 5px;
   text-align: center;
 }
 
 /*****************************************
-MAIN-CONTAINER
+MAIN CONTENT
 *****************************************/
 
 .section-title {
@@ -219,26 +365,27 @@ MAIN-CONTAINER
 SEARCH SECTION
 **********************/
 
-.dashboard-title-search-container {
-  padding-bottom: 10px;
+.app-search {
+  /* 10px / 14px */
+  padding: 0 0 .714285em 0;
 }
 
-h2.dashboard {
-  padding-top: .25em;
-  padding-left: 1.6%;
+.app-search div.col-mobile {
+  margin-top: 0;
+}
+
+h2.dashboard-title {
+  padding-top: .5em;
 }
 
 .dashboard-search-container {
   background: #e0e0e0;
-  padding: .5em .5em;
+  padding: .75em .75em;
 }
 
 #searchBar {
   float: right;
-  margin-right: 8px;
-  width: 75%;
   padding: .25em;
-
 }
 
 
@@ -253,10 +400,10 @@ ALERT SECTION
   font-size: 12px;
   font-weight: 100;
   letter-spacing: 1px;
-  margin: 1.6%;
+  margin: 1.6% 1.6%;
   padding: 8px 12px;
   position: relative;
-  width: 95%;
+  /*width: 95%;*/
 }
 
 .user-alert-container .close-alert {
@@ -281,36 +428,17 @@ ALERT SECTION
 MEDIA QUERIES
 *****************************************/
 
-@media (min-width: 400px) {
 
-  .col-10-12 {
-    	width: 83.06%;
-  }
 
-  .col-2-12 {
-    	width: 15.33%;
-  }
-  /*****************************************
-  HEADER
-  *****************************************/
+@media (min-width: 480px) {
+
+  /******  HEADER  ******/
 
   .username {
     display: block;
   }
 
-  .header-nav a:last-child {
-    padding-right: 10px;
-  }
-
-}
-
-
-
-@media (min-width: 460px) {
-
-  /*****************************************
-  APP PRIMARY NAVIGATION
-  *****************************************/
+  /****  APP NAV  ****/
 
   svg {
     width: 32px;
@@ -331,45 +459,8 @@ MEDIA QUERIES
 }
 
 @media (min-width: 600px) {
-  /*****************************************
-  GRID LAYOUT 12 GRID FOR TABLET AND LARGER
-  *****************************************/
-  .col-1-8 {
-    width: 12.5%;
-  }
 
-  .col-12-12 {
-    width: 100%;
-  }
-
-  .col-11-12 {
-    	width: 92.99448%;
-  }
-
-  .col-10-12 {
-    	width: 83.06%;
-  }
-
-  .col-9-12 {
-    	width: 74.6%;
-  }
-
-  .col-2-12 {
-    	width: 15.33%;
-  }
-
-  .col-3-12 {
-    	width: 23.8%;
-  }
-
-  .col-1-12 {
-    	width: 6.866%;
-  }
-
-
-  /*****************************************
-  APP PRIMARY NAVIGATION
-  *****************************************/
+  /****  APP NAV  ****/
   svg {
     width: 24px;
   }
@@ -401,19 +492,22 @@ MEDIA QUERIES
     border-color: #76bf7a;
   }
 
-  /*****************************************
-  MAIN CONTENT
-  *****************************************/
+  /******  MAIN CONTENT  ******/
 
-
-  /******************
-  SEARCHBAR
-  ******************/
+  /****  SEARCHBAR  ****/
 
   .dashboard-title-search-container {
     padding-left: 1.5%;
   }
 
+  /****  ALERT  ****/
+
+  .user-alert-container {
+    width: 97%;
+    /* 18px / 12px */
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
 
 }
 
