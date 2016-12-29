@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #65a2b2;
+  background-color: #3b3a5f;
   font-family: 'Roboto', sans-serif;
   line-height: 1.4;
   font-size: 14px;
@@ -71,36 +71,14 @@ RESPONSIVE GRID
 
 /* col Setup */
 .col {
-  margin: 1% 0 1% 0%;
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+  padding-left: 1.6%;
 }
 
 .col:first-child { margin-left: 0; }
 
-/* mobile-col
-for multi column layout
-on small screen sizes, if a multi col layout is needed on devices w/ 479px or less use .col-moblie instead of .col */
-.col-mobile {
-  display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
-  padding-left: 1.5%;
-}
-
-.col-mobile:first-child {
-  margin-left: 0;
-}
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-
-@media only screen and (min-width: 480px) {
-  .col {
-    display: block;
-    float:left;
-    margin: 1% 0 1% 1.6%;
-    padding-left: 1.5%;
-  }
-
-}
 
 /* mobile multi column grid classes, use if a multi column layout is need on 479px or less */
 
@@ -146,120 +124,49 @@ on small screen sizes, if a multi col layout is needed on devices w/ 479px or le
 
 /* md size screens */
 
-.md-col-2-12 {
-  width: 15.33%;
-}
-
-.md-col-10-12 {
-  width: 83.06%;
-}
-
-
-
-/* mobile first grid */
-
-.col-12-12 {
-  width: 100%;
-}
-
-.col-11-12 {
-	width: 100%;
-}
-
-.col-10-12 {
-	width: 100%;
-}
-
-.col-9-12 {
-	width: 100%;
-}
-
-.col-8-12 {
-	width: 100%;
-}
-
-.col-7-12 {
-	width: 100%;
-}
-
-.col-6-12 {
-	width: 100%;
-}
-
-.col-5-12 {
-	width: 100%;
-}
-
-.col-4-12 {
-	width: 100%;
-}
-
-.col-3-12 {
-	width: 100%;
-}
-
-.col-2-12 {
-	width: 100%;
-}
-
-.col-1-12 {
-	width: 100%;
-}
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (min-width: 480px) {
+  .md-col-2-12 {
+    width: 15.33%;
+  }
 
-	.col-12_of_12 {
-		width: 100%;
-	}
+  .md-col-10-12 {
+    width: 83.06%;
+  }
 
-	.col-11_of_12 {
-		width: 91.53%;
-	}
-
-	.col-10_of_12 {
-		width: 83.06%;
-	}
-
-	.col-9_of_12 {
-		width: 74.6%;
-	}
-
-	.col-8_of_12 {
-		width: 66.13%;
-	}
-
-	.col-7_of_12 {
-		width: 57.66%;
-	}
-
-	.col-6_of_12 {
-		width: 49.2%;
-	}
-
-	.col-5_of_12 {
-		width: 40.73%;
-	}
-
-	.col-4_of_12 {
-		width: 32.26%;
-	}
-
-	.col-3_of_12 {
-		width: 23.8%;
-	}
-
-	.col-2_of_12 {
-		width: 15.33%;
-	}
-
-	.col-1_of_12 {
-		width: 6.86%;
-	}
+  .col-lg {
+    display: block;
+    float:left;
+  }
 
 }
+
+@media only screen and (min-width: 600px) {
+
+  .col-lg {
+    display: block;
+    float: left;
+  }
+
+  .lg-col-1-12 {
+    width: 6.86%;
+  }
+
+  .lg-col-2-12 {
+    width: 15.33%;
+  }
+
+  .lg-col-10-12 {
+    width: 83.06%;
+  }
+
+  .lg-col-11-12 {
+    width: 93.14%;
+  }
+
+}
+
+
 
 
 /*****************************************
@@ -330,13 +237,15 @@ APP PRIMARY NAVIGATION
   flex-direction: row;
   justify-content: center;
   padding-top: .5em;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .navigation-list li {
   border-bottom: 4px solid #3b3a5f;
   transition: border-color .4s ease-in;
-  flex-grow: 1;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .navigation-list li:hover,
@@ -430,7 +339,7 @@ MEDIA QUERIES
 
 
 
-@media (min-width: 480px) {
+@media  only screen and (min-width: 480px) {
 
   /******  HEADER  ******/
 
@@ -445,8 +354,8 @@ MEDIA QUERIES
   }
 
   .navigation-list {
-    display: initial;
-    float: right;
+    align-self: stretch;
+    flex-direction: column;
     padding-top: .5em;
     padding-bottom: .25em;
   }
@@ -456,63 +365,4 @@ MEDIA QUERIES
     margin-right: 8px;
   }
 
-}
-
-@media (min-width: 600px) {
-
-  /****  APP NAV  ****/
-  svg {
-    width: 24px;
-  }
-
-  .app-navigation-container {
-    padding-right: 0;
-    height: 100vh;
-    min-height: 100%;
-    max-width: 70px;
-  }
-
-  .navigation-list {
-    padding-top: 1em;
-  }
-
-  .navigation-list li {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .navigation-list li {
-    border-bottom: 0;
-    border-left: 4px solid #3b3a5f;
-    transition: border-color.4s ease-in;
-  }
-
-  .navigation-list li:hover,
-  .navigation-list li:focus {
-    border-color: #76bf7a;
-  }
-
-  /******  MAIN CONTENT  ******/
-
-  /****  SEARCHBAR  ****/
-
-  .dashboard-title-search-container {
-    padding-left: 1.5%;
-  }
-
-  /****  ALERT  ****/
-
-  .user-alert-container {
-    width: 97%;
-    /* 18px / 12px */
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-  }
-
-}
-
-@media (min-width: 800px) {
-  svg {
-    width: 32px;
-  }
 }
