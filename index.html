@@ -62,7 +62,7 @@
 
     <!-- section for app nav and main content -->
     <div class="section cf">
-        <div class="col-lg sm-col-12-12 md-col-2-12 lg-col-1-12">
+        <div class="col sm-col-12-12 md-col-2-12 lg-col-1-12">
 
             <!-- NAVIGATION WEB APP -->
             <div class="app-navigation-container">
@@ -177,9 +177,9 @@
 
 
 
-        <div class="col-lg sm-col-12-12 md-col-10-12 lg-col-11-12">
+        <div class="col sm-col-12-12 md-col-10-12 lg-col-11-12 col-no-top-margin col-no-left-padding col-no-right-padding">
             <!-- MAIN CONTENT AREA -->
-            <div class="main-container">
+            <main class="main-container">
 
                 <!-- section .app-navigation-container -->
                 <div class="app-search">
@@ -190,7 +190,7 @@
                         </div>
 
                         <div class="sm-col-7-12 col">
-                            <div class="dashboard-search-container cf">
+                            <div class="dashboard-search-container cf thin-border">
                                 <input id="searchBar" type="search" name="search-bar" placeholder="Search" />
                             </div>
                             <!-- .dashboard-search-container -->
@@ -218,154 +218,183 @@
                 <!-- user-alert-container -->
 
                 <!-- LINE GRAPH TRAFFIC CHART DATA SECTION -->
-                <section class="line-chart-traffic-container">
-                    <h3 class="section-title">Traffic</h3>
-                    <!-- Line chart.js here -->
-                    <!-- Placehold.it img -->
-                    <img src="http://placehold.it/800x350" alt="line graph">
-                </section>
+                <div class="section cf">
+                    <section class="line-chart-traffic-container col sm-col-12-12">
+                        <h3 class="section-title">Traffic</h3>
+                        <!-- Line chart.js here -->
+                        <!-- Placehold.it img -->
+                        <img src="http://placehold.it/800x350" alt="line graph">
+                    </section>
 
-                <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
-                <section class="line-chart-traffic-container">
-                    <h3 class="section-title">Daily Traffic</h3>
-                    <!-- bar graph chart.js here -->
-                    <!-- Placehold.it img -->
-                    <img src="http://placehold.it/400x350" alt="line graph">
-                </section>
+                    <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
+                    <section class="line-chart-traffic-container thin-border col-no-bottom-margin col sm-col-12-12 md-col-6-12">
+                        <h3 class="section-title">Daily Traffic</h3>
+                        <!-- bar graph chart.js here -->
+                        <!-- Placehold.it img -->
+                        <img src="http://placehold.it/400x350" alt="line graph">
+                    </section>
 
-                <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
-                <section class="line-chart-traffic-container">
-                    <h3 class="section-title">Daily Traffic</h3>
-                    <!-- doughnut graph chart.js here -->
-                    <!-- Placehold.it img -->
-                    <img src="http://placehold.it/400x350" alt="line graph">
-                </section>
+                    <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
+                    <section class="line-chart-traffic-container thin-border col-no-bottom-margin col sm-col-12-12 md-col-6-12">
+                        <h3 class="section-title">Mobile Users</h3>
+                        <!-- doughnut graph chart.js here -->
+                        <!-- Placehold.it img -->
+                        <img src="http://placehold.it/400x350" alt="line graph">
+                    </section>
+                </div>
+                <!-- .section -->
 
                 <!-- SOCIAL STATS CONTAINER -->
-                <div class="social-stats-container">
-
-                    <h3 class="section-title">Social Stats</h3>
-
-                    <div class="social-block-items">
+                <div class="social-stats-container thin-border section cf">
+                    <div class="col sm-col-12-12 col-no-right-padding">
+                        <h3 class="section-title">Social Stats</h3>
 
                         <!-- TWITTER BLOCK ITEM -->
-                        <div class="social-block social-block-twitter">
-                            <h4 class="social-block-title">Twitter</h4>
-                            <!-- <img class="social-icon" src="icons/icon-twitter.svg" alt="twitter icon"> -->
-                            <span class="social-stat-count">10,345</span>
-                        </div>
-                        <!-- .social-block-twitter -->
+                        <div class="section cf">
+                            <div class="social-block social-block-twitter thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-twitter.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Twitter</h4>
+                                <span class="social-stat-count">10,345</span>
+                            </div>
+                            <!-- .social-block-twitter -->
 
-                        <!-- FACEBOOK BLOCK ITEM -->
-                        <div class="social-block social-block-facebook">
-                            <h4 class="social-block-title">Facebook</h4>
-                            <!-- <img class="social-icon" src="icons/icon-facebook.svg" alt="facebook icon"> -->
-                            <span class="social-stat-count">18,739</span>
-                        </div>
-                        <!-- .social-block-facebook -->
+                            <!-- FACEBOOK BLOCK ITEM -->
+                            <div class="social-block social-block-facebook thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-facebook.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Facebook</h4>
+                                <span class="social-stat-count">18,739</span>
+                            </div>
+                            <!-- .social-block-facebook -->
 
-                        <!-- GOOGLE+ BLOCK ITEM -->
-                        <div class="social-block social-block-google">
-                            <h4 class="social-block-title">Google+</h4>
-                            <!-- <img class="social-icon" src="icons/icon-google-plus.svg" alt="google-plus icon"> -->
-                            <span class="social-stat-count">2,530</span>
+                            <!-- GOOGLE+ BLOCK ITEM -->
+                            <div class="social-block social-block-google thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-google-plus.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Google+</h4>
+                                <span class="social-stat-count">2,530</span>
+                            </div>
+                            <!-- .social-block-google -->
                         </div>
-                        <!-- .social-block-google -->
-
+                        <!-- .section cf -->
                     </div>
-                    <!-- .social-block-items -->
-
+                    <!-- col sm-col-12-12 -->
                 </div>
                 <!-- .social-stats-container -->
 
                 <!-- NEW MEMBERS SECTION -->
-                <div class="members-list-container">
-                    <h3 class="section-title members-list-title">New Members</h3>
-                    <ul class="members-list">
-                        <li>
-                            <!-- Add Pic -->
-                            <span class="users-name">Victoria Chambers</span>
-                            <a class="user-email" href="#">user@example.com</a>
-                            <span class="user-join-date">10/15/17</span>
+                <div class="members-new-active-container thin-border">
+                    <div class="section cf">
+                        <div class="members-list-container col sm-col-12-12 lg-col-6-12">
+                            <h3 class="section-title members-list-title">New Members</h3>
+                            <ul class="members-list">
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="user-name">Victoria Chambers</span>
+                                    <a class="user-email" href="#">victoria.chambers89@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
 
-                        </li>
+                                </li>
 
-                        <li>
-                            <!-- Add Pic -->
-                            <span class="users-name">Dale Byrd</span>
-                            <a class="user-email" href="#">user@example.com</a>
-                            <span class="user-join-date">10/15/17</span>
+                                <li>
+                                    <!-- Add Pic -->
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <span class="users-name">Dale Byrd</span>
+                                    <a class="user-email" href="#">dale.byrd52@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
 
-                        </li>
+                                </li>
 
-                        <li>
-                            <!-- Add Pic -->
-                            <span class="users-name">Kris Osborne</span>
-                            <a class="user-email" href="#">user@example.com</a>
-                            <span class="user-join-date">10/15/17</span>
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="users-name">Kris Osborne</span>
+                                    <a class="user-email" href="#">kris.osborne06@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
 
-                        </li>
+                                </li>
 
-                        <li>
-                            <!-- Add Pic -->
-                            <span class="users-name">Stephaie Haramut</span>
-                            <a class="user-email" href="#">user@example.com</a>
-                            <span class="user-join-date">07/07/17</span>
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="users-name">Stephanie Haramut</span>
+                                    <a class="user-email" href="#">steph.haramut7@example.com</a>
+                                    <span class="user-join-date">07/07/17</span>
 
-                        </li>
+                                </li>
 
-                    </ul>
-                    <!-- .new-members-list -->
+                            </ul>
+                            <!-- .new-members-list -->
+                        </div>
+
+                        <!-- RECENT ACTIVITY SECTION -->
+                        <div class="members-list-container col sm-col-12-12 lg-col-6-12">
+                            <h3 class="section-title members-list-title">Recent Activity</h3>
+                            <ul class="members-list active-members">
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="users-name">Victoria Chambers</span> commented on
+                                        <strong>YourApp&apos;s SEO Tips</strong>
+                                        <span class="comment-time">4 hours ago</span>
+                                    </p>
+
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="users-name">Dale Byrd</span> liked the post
+                                        <strong>Facebook&apos;s Changes for 2016</strong>
+                                        <span class="comment-time">6 hours ago</span>
+                                    </p>
+
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="users-name">Kris Osborne</span> commented on
+                                        <strong>Facebook&apos;s Changes for 2016</strong>
+                                        <span class="comment-time">1 day ago</span>
+                                    </p>
+
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+
+                                    <p>
+                                        <span class="users-name">Stephanie Haramut</span> posted on
+                                        <strong>YourApp&apos;s Photo Tips</strong>
+                                        <span class="comment-time">1 week ago</span>
+                                    </p>
+
+
+
+                                </li>
+
+                            </ul>
+                            <!-- .new-members-list -->
+                        </div>
+                        <!-- .members-list-container -->
+                    </div>
+                    <!-- .section -->
                 </div>
-
-                <!-- RECENT ACTIVITY SECTION -->
-                <div class="members-list-container">
-                    <h3 class="section-title members-list-title">Recent Activity</h3>
-                    <ul class="members-list">
-
-                        <li>
-                            <!-- Add Pic -->
-                            <p>
-                                <span class="users-name">Victoria Chambers</span> commented on
-                                <strong>YourApp&apos;s SEO Tips</strong>
-                            </p>
-                            <span class="comment-time">4 hours ago</span>
-
-                        </li>
-
-                        <li>
-                            <!-- Add Pic -->
-                            <p>
-                                <span class="users-name">Dale Byrd</span> liked the post
-                                <strong>Facebook&apos;s Changes for 2016</strong>
-                            </p>
-                            <span class="comment-time">6 hours ago</span>
-
-                        </li>
-
-                        <li>
-                            <!-- Add Pic -->
-                            <p>
-                                <span class="users-name">Kris Osborne</span> commented on
-                                <strong>Facebook&apos;s Changes for 2016</strong>
-                            </p>
-                            <span class="comment-time">1 day ago</span>
-
-                        </li>
-
-                        <li>
-                            <!-- Add Pic -->
-                            <p>
-                                <span class="users-name">Stephanie Haramut</span> posted on
-                                <strong>YourApp&apos;s Photo Tips</strong>
-                            </p>
-                            <span class="comment-time">1 week ago</span>
-
-                        </li>
-
-                    </ul>
-                    <!-- .new-members-list -->
-                </div>
+                <!-- members-new-active-container -->
 
                 <!-- MESSAGE USER SECTION -->
                 <div class="message-user-container">
@@ -411,8 +440,9 @@
 
                 </div>
                 <!-- .app-settings-container -->
-            </div>
+            </main>
         </div>
+
         <!-- #main-container -->
     </div>
     <!-- col -->

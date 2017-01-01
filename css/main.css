@@ -1,368 +1,501 @@
-* {
-  box-sizing: border-box;
-}
+ * {
+     box-sizing: border-box;
+ }
 
-body {
-  background-color: #3b3a5f;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.4;
-  font-size: 14px;
-  max-width: 1200px;
-  margin: 0 auto;
-  -webkit-box-shadow: 0px 3px 9px -1px rgba(44,74,82,1);
-  -moz-box-shadow: 0px 3px 9px -1px rgba(44,74,82,1);
-  box-shadow: 0px 3px 9px -1px rgba(44,74,82,1);
-}
+ body {
+     margin: 0 auto;
+     background-color: #3b3a5f;
+     -webkit-box-shadow: 0px 3px 9px -1px rgba(44, 74, 82, 1);
+     -moz-box-shadow: 0px 3px 9px -1px rgba(44, 74, 82, 1);
+     box-shadow: 0px 3px 9px -1px rgba(44, 74, 82, 1);
+     font-family: 'Roboto', sans-serif;
+     font-size: 14px;
+     line-height: 1.4;
+ }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+ h1, h2, h3, h4, h5, h6 {
+     margin-top: 0;
+     margin-bottom: 0;
+ }
+
+ a {
+     display: block;
+     text-decoration: none;
+ }
+
+ ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+ }
+
+ img {
+     max-width: 100%;
+ }
+
+ svg {
+     width: 32px;
+ }
+
+
+ /*****************************************
+RESPONSIVE GRID
+*****************************************/
+ /*  clearfix Apply to all Section div's */
+
+ .cf:before, .cf:after {
+     display: table;
+     content: "";
+ }
+
+ .cf:after {
+     clear: both;
+ }
+
+ .cf {
+     zoom: 1;
+     /* For IE 6/7 (trigger hasLayout) */
+ }
+ /* SECTION */
+
+ .section {
+     clear: both;
+     margin: 0px;
+     padding: 0px;
+ }
+ /* col Setup */
+
+ .col {
+     display: block;
+     float: left;
+     margin: 1% 0 1% 0;
+     padding-left: 1.6%;
+ }
+
+ /* mobile multi column grid classes, use if a multi column layout is need on 479px or less */
+
+ .sm-col-2-12 {
+     width: 15.33%;
+ }
+
+ .sm-col-3-12 {
+     width: 23.8%;
+ }
+
+ .sm-col-4-12 {
+     width: 32.26%;
+ }
+
+ .sm-col-5-12 {
+     width: 40.73%;
+ }
+
+ .sm-col-6-12 {
+     width: 49.2%;
+ }
+
+ .sm-col-7-12 {
+     width: 57.66%;
+ }
+
+ .sm-col-8-12 {
+     width: 66.13%;
+ }
+
+ .sm-col-9-12 {
+     width: 74.6%;
+ }
+
+ .sm-col-10-12 {
+     width: 83.06%;
+ }
+
+ .sm-col-12-12 {
+     width: 100%;
+ }
+ /* md size screens */
+
+ @media only screen and (min-width: 480px) {
+
+     .md-col-2-12 {
+         width: 12%;
+     }
+
+     .md-col-4-12 {
+       width: 32.26%;
+     }
+
+     .md-col-6-12 {
+         width: 50%;
+     }
+
+     .md-col-10-12 {
+         width: 88%;
+     }
+ }
+
+ @media only screen and (min-width: 600px) {
+
+     .lg-col-1-12 {
+         width: 9%;
+     }
+
+     .lg-col-2-12 {
+         width: 15.33%;
+     }
+
+     .lg-col-6-12 {
+       width: 50%;
+     }
+
+     .lg-col-10-12 {
+         width: 83.06%;
+     }
+
+     .lg-col-11-12 {
+         width: 91%;
+     }
+ }
+
+ @media only screen and (min-width: 1000px) {}
+
+
+ /*****************************************
+Custom .classes
+*****************************************/
+.col-no-top-margin {
   margin-top: 0;
+}
+
+.col-no-bottom-margin {
   margin-bottom: 0;
 }
 
-a {
-  display: block;
-  text-decoration: none;
+.col-no-left-margin {
+  margin-left: 0;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.col-no-left-padding {
+  padding-left: 0;
 }
 
-img {
-  max-width: 100%;
+.col-no-right-padding {
+  padding-right: 0;
 }
 
-svg {
-  width: 32px;
+.thin-border {
+  border: 1px solid #e6e6e6;
 }
 
-
-
-/*****************************************
-RESPONSIVE GRID
-*****************************************/
-
-/*  clearfix Apply to all Section div's */
-.cf:before,
-.cf:after {
-    content:"";
-    display:table;
-}
-.cf:after {
-    clear:both;
-}
-.cf {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
-}
-
-/* SECTION */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/* col Setup */
-.col {
-  display: block;
-  float: left;
-  margin: 1% 0 1% 1.6%;
-  padding-left: 1.6%;
-}
-
-.col:first-child { margin-left: 0; }
-
-
-/* mobile multi column grid classes, use if a multi column layout is need on 479px or less */
-
-.sm-col-2-12 {
-  width: 15.33%;
-}
-
-.sm-col-3-12 {
-  width: 23.8%;
-}
-
-.sm-col-4-12 {
-  width: 32.26%;
-}
-
-.sm-col-5-12 {
-  width: 40.73%;
-}
-
-.sm-col-6-12 {
-	width: 49.2%;
-}
-
-.sm-col-7-12 {
-  width: 57.66%;
-}
-
-.sm-col-8-12 {
-  width: 66.13%;
-}
-
-.sm-col-9-12 {
-  width: 74.6%;
-}
-
-.sm-col-10-12 {
-  width: 83.06%;
-}
-
-.sm-col-12-12 {
-  width: 100%;
-}
-
-/* md size screens */
-
-
-@media only screen and (min-width: 480px) {
-  .md-col-2-12 {
-    width: 15.33%;
-  }
-
-  .md-col-10-12 {
-    width: 83.06%;
-  }
-
-  .col-lg {
-    display: block;
-    float:left;
-  }
-
-}
-
-@media only screen and (min-width: 600px) {
-
-  .col-lg {
-    display: block;
-    float: left;
-  }
-
-  .lg-col-1-12 {
-    width: 6.86%;
-  }
-
-  .lg-col-2-12 {
-    width: 15.33%;
-  }
-
-  .lg-col-10-12 {
-    width: 83.06%;
-  }
-
-  .lg-col-11-12 {
-    width: 93.14%;
-  }
-
+.text-light-purple {
+  color: #5e62b3;
 }
 
 
-
-
-/*****************************************
+ /*****************************************
 HEADER
 *****************************************/
-.main-header{
-  background-color: #5e62b3;
-}
 
-.title,
-.username {
-  color: #f2f2f2;
-}
+ .main-header {
+     background-color: #5e62b3;
+ }
 
-.title > span,
-.username {
-  font-weight: 100;
-}
+ .title, .username {
+     color: #f2f2f2;
+ }
 
-/* Hide name on mobile */
-.username {
-  display: none;
-}
+ .title>span, .username {
+     font-weight: 100;
+ }
+ /* Hide name on mobile */
 
-ul.header-nav {
-  float: right;
-  padding-top: .25em;
-}
+ .username {
+     display: none;
+ }
 
-ul.header-nav li {
-  float: left;
-}
+ ul.header-nav {
+     float: right;
+     padding-top: .25em;
+ }
 
-ul.header-nav li:first-child {
-  border-right: 1px solid #100821;
-}
+ ul.header-nav li {
+     float: left;
+ }
 
-.header-nav a {
-  padding: 0 10px;
-}
+ ul.header-nav li:first-child {
+     border-right: 1px solid #57568a;
+ }
 
-.header-nav a:last-child a {
-  padding-right: 5px;
-  border: 1px solid red;
-}
+ .header-nav a {
+     padding-left: 10px;
+ }
 
-ul.header-nav svg {
-  width: 30px;
-}
+ .header-nav li:first-child a{
+   padding-right: 5px;
+ }
 
-.header-nav .profile-pic {
-  width: 32px;
-  border-radius: 50%;
-}
+ ul.header-nav svg {
+     width: 30px;
+ }
 
-
-
-/*****************************************
+ .header-nav .profile-pic {
+     width: 32px;
+     border-radius: 50%;
+ }
+ /*****************************************
 APP PRIMARY NAVIGATION
 *****************************************/
 
-.app-navigation-container {
-  background: #3b3a5f;
-}
+ .app-navigation-container {
+     background: #3b3a5f;
+ }
 
-.navigation-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: .5em;
-  padding-left: 1%;
-  padding-right: 1%;
-}
+ .navigation-list {
+     display: flex;
+     flex-direction: row;
+     padding-top: .5em;
+     padding-right: 1%;
+     padding-left: 1%;
+     justify-content: center;
+ }
 
-.navigation-list li {
-  border-bottom: 4px solid #3b3a5f;
-  transition: border-color .4s ease-in;
-  margin-left: 5px;
-  margin-right: 5px;
-}
+ .navigation-list li {
+     padding: 0 5px;
+     margin-right: 5px;
+     margin-left: 5px;
+     transition: border-color .4s ease-in;
+     border-bottom: 4px solid #3b3a5f;
+ }
 
-.navigation-list li:hover,
-.navigation-list li:focus {
-  border-color: #76bf7a;
-}
+ .navigation-list li:hover, .navigation-list li:focus {
+     border-color: #76bf7a;
+ }
 
-.navigation-list li a {
-  padding: 0 5px;
-  text-align: center;
-}
-
-/*****************************************
+ /*****************************************
 MAIN CONTENT
 *****************************************/
 
-.section-title {
-  font-weight: 300;
-}
+ .section-title {
+     font-weight: 100;
+ }
 
-.main-container {
-  background: #fff;
-}
-
-/**********************
+ .main-container {
+     background: #fff;
+ }
+ /**********************
 SEARCH SECTION
 **********************/
 
-.app-search {
-  /* 10px / 14px */
-  padding: 0 0 .714285em 0;
-}
+ .app-search {
+     /* 10px / 14px */
+     padding: 0 0 .714285em 0;
+ }
 
-.app-search div.col-mobile {
-  margin-top: 0;
-}
+ .app-search div.col-mobile {
+     margin-top: 0;
+ }
 
-h2.dashboard-title {
-  padding-top: .5em;
-}
+ h2.dashboard-title {
+     padding-top: .5em;
+ }
 
-.dashboard-search-container {
-  background: #e0e0e0;
-  padding: .75em .75em;
-}
+ .dashboard-search-container {
+     padding: .75em;
+     background: #f7f7f7;
+ }
 
-#searchBar {
-  float: right;
-  padding: .25em;
-}
-
-
-/**********************
+ #searchBar {
+     float: right;
+     padding: .25em;
+ }
+ /**********************
 ALERT SECTION
 **********************/
 
-.user-alert-container {
-  background: #5e62b3;
+ .user-alert-container {
+     position: relative;
+     margin: 1.6% 1.6%;
+     padding: 8px 12px;
+     letter-spacing: 1px;
+     color: #f2f2f2;
+     border-radius: 5px;
+     background: #5e62b3;
+     font-size: 12px;
+     font-weight: 100;
+     /*width: 95%;*/
+ }
+
+ .user-alert-container .close-alert {
+     position: absolute;
+     top: 6px;
+     right: 8px;
+     font-size: 1.2em;
+     font-weight: 500;
+ }
+
+ .user-alert-container>p {
+     margin: 0 0;
+     padding-right: 8px;
+ }
+
+ .user-alert-container p strong {
+     padding-right: 4px;
+ }
+ /**********************
+GRAPHS
+**********************/
+
+ .line-chart-traffic-container {
+ }
+
+
+ /**********************
+SOCIAL STATS AREA
+**********************/
+.social-stats-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 1.6%;
+}
+
+.social-block {
+  background: #f7f7f7;
   border-radius: 5px;
-  color: #f2f2f2;
-  font-size: 12px;
+  padding: 1.6%;
+  margin-right: 1%;
+}
+
+.social-icon-container {
+  width: 52px;
+  height: 52px;
+  background: #5e62b3;
+  border-radius: 50%;
+  float:left;
+  margin-right: .5em;
+  padding: 10px 10px 10px;
+}
+
+img.svg {
+  display: block;
+  width: 2em;
+  margin: 2px auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-block-title {
+  margin-bottom: -5px;
+}
+
+.social-stat-count {
+  font-size: 2rem;
   font-weight: 100;
-  letter-spacing: 1px;
-  margin: 1.6% 1.6%;
-  padding: 8px 12px;
+  color: #7b7b7b;
+}
+
+/*************************
+NEW / ACTIVE MEMBERS AREA
+*************************/
+
+.members-list-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 1.6%;
+  color: #7b7b7b;
+}
+
+ul.members-list li {
   position: relative;
-  /*width: 95%;*/
+  border-bottom: 1px solid #e6e6e6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 4rem;
 }
 
-.user-alert-container .close-alert {
+ul.members-list li:last-of-type {
+  border-bottom: none;
+}
+
+.member-pic {
+  width: 32px;
+  border-radius: 50%;
+  float:left;
+  margin-right: 4px;
+}
+
+.user-email,
+.comment-time {
+  display: block;
+  color: rgba(94,98,179,.77);
+  margin-top: -2px;
+}
+
+.user-join-date {
   position: absolute;
-  right: 8px;
-  top: 6px;
-  font-size: 1.2em;
-  font-weight: 500;
+  right: 0;
+  top: 10px;
 }
 
-.user-alert-container > p {
-  margin: 0 0;
-  padding-right: 8px;
+/* ACTIVE MEMBERS AREA */
+.user-email,
+.comment-time,
+.users-name,
+ul.members-list li p {
+font-weight: 300;
+font-size: .714rem;
 }
 
-.user-alert-container p strong {
-  padding-right: 4px;
+ul.active-members li p {
+  margin-top: 2px;
 }
 
 
-/*****************************************
+
+
+ /*****************************************
 MEDIA QUERIES
 *****************************************/
 
+ @media only screen and (min-width: 480px) {
+     /* col class media queries in grid layout
+  section top of stylesheet */
+     /******  HEADER  ******/
+     h1.title {
+         /* 7px / 28px */
+         padding-left: .25em;
+     }
+     .username {
+         display: block;
+     }
+     /****  APP NAV  ****/
+     svg {
+         width: 32px;
+     }
+     .navigation-list {
+         flex-direction: column;
+         /* 18px / 14px */
+         padding-top: 1.2857em;
+         align-self: stretch;
+     }
+     .navigation-list li {
+         float: left;
+         margin-bottom: 1em;
+         /* 10px / 14px */
+         margin-left: 1px;
+         /* reset bottom boarder on vertical
+    nav */
+         border-bottom: 0;
+         border-left: 4px solid #3b3a5f;
+     }
 
+     /* SOCIAL STATS AREA */
+     .social-stats-container {
+       padding-right: 0;
+     }
+ }
 
-@media  only screen and (min-width: 480px) {
-
-  /******  HEADER  ******/
-
-  .username {
-    display: block;
-  }
-
-  /****  APP NAV  ****/
-
-  svg {
-    width: 32px;
-  }
-
-  .navigation-list {
-    align-self: stretch;
-    flex-direction: column;
-    padding-top: .5em;
-    padding-bottom: .25em;
-  }
-
-  .navigation-list li {
-    float: left;
-    margin-right: 8px;
-  }
-
-}
+ @media only screen and (min-width: 600px) {
+   .members-list-container:first-of-type {
+     border-right: 1px solid #e6e6e6;
+   }
+ }

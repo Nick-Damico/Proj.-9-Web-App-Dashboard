@@ -5,7 +5,7 @@ complete with JavaScript-driven charts and Graphs. No backend required.
 
 * Tools used to build :
 ** HTML
-** CSS / SASS
+** CSS
 ** GIT / Command Line
 ** jQuery
 ** chart.js
