@@ -5,27 +5,16 @@ complete with JavaScript-driven charts and Graphs. No backend required.
 
 * Tools used to build :
 ** HTML
-** CSS / SASS
+** CSS
 ** GIT / Command Line
 ** jQuery
 ** chart.js
 
-12/22/2017
-Day 1 : Setup HTML files to structure Page,
-	Added Project to Git,
-	Created Readme.md
-	** ToDo for HTML **
-	1) Add Charts.js
-	2) profile pics for
-	new and recent users
-================================
-12/23/2017
-Day 2 : SCSS Dir added,
-	1) CSS/SCSS Dir added.
-	2) select added
+ToDo :
+=========
 
-
-================================
-Day 3 :
-
-================================
+Fix :
+===========
+1)	vertical nav width > 600px
+2)	double borders due to thin-border class
+3) 	font weight size on .users-comment-info

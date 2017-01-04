@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<path d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
-	c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
-	c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
-	c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,3,10.1,3c12.1,0,18.7-10,18.7-18.7
-	c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg fill="white" width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,0.05,2.95)">
+        <path d="M32,3.1C30.8,3.6 29.6,4 28.2,4.1C29.6,3.3 30.6,2 31.1,0.5C29.8,1.3 28.4,1.8 26.9,2.1C25.8,0.8 24,0 22.2,0C18.6,0 15.6,2.9 15.6,6.6C15.6,7.1 15.7,7.6 15.8,8.1C10.3,7.8 5.5,5.2 2.2,1.2C1.6,2.2 1.3,3.3 1.3,4.5C1.3,6.8 2.5,8.8 4.2,10C3.1,10 2.1,9.7 1.2,9.2L1.2,9.3C1.2,12.5 3.5,15.1 6.5,15.7C5.9,15.8 5.4,15.9 4.8,15.9C4.4,15.9 4,15.9 3.6,15.8C4.4,18.4 6.9,20.3 9.7,20.4C7.5,22.2 4.6,23.2 1.5,23.2C1,23.2 0.4,23.2 -0.1,23.1C2.8,25 6.3,26.1 10,26.1C22.1,26.1 28.7,16.1 28.7,7.4C28.7,7.1 28.7,6.8 28.7,6.6C30,5.6 31.1,4.4 32,3.1Z" style="fill-rule:nonzero;"/>
+    </g>
 </svg>

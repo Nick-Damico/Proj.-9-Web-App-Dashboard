@@ -91,3 +91,64 @@
 	}
 
 }
+
+
+/* Removed for testing */
+
+@media  only screen and (min-width: 600px) {
+
+  /****  APP NAV  ****/
+  svg {
+    width: 24px;
+  }
+
+  .app-navigation-container {
+    padding-right: 0;
+    height: 100vh;
+
+  }
+
+  .navigation-list {
+    padding-top: 1em;
+  }
+
+  .navigation-list li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .navigation-list li {
+    border-bottom: 0;
+    border-left: 4px solid #3b3a5f;
+    transition: border-color.4s ease-in;
+  }
+
+  .navigation-list li:hover,
+  .navigation-list li:focus {
+    border-color: #76bf7a;
+  }
+
+  /******  MAIN CONTENT  ******/
+
+  /****  SEARCHBAR  ****/
+
+  .dashboard-title-search-container {
+    padding-left: 1.5%;
+  }
+
+  /****  ALERT  ****/
+
+  .user-alert-container {
+    width: 97%;
+    /* 18px / 12px */
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+}
+
+@media  only screen and (min-width: 800px) {
+  svg {
+    width: 32px;
+  }
+}

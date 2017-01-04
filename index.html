@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js></script>
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
@@ -21,10 +20,10 @@
     <!-- HEADER - LOGO - PROFILE -->
     <header class="main-header">
         <div class="section cf">
-            <div class="sm-col-5-12 col-mobile">
+            <div class="sm-col-5-12 col">
                 <h1 class="title">Your<span>App</span></h1>
             </div>
-            <div class="sm-col-7-12 cf col-mobile">
+            <div class="sm-col-7-12 cf col">
                 <ul class="header-nav">
                     <li>
                         <a href="#">
@@ -43,7 +42,7 @@
                     </li>
                     <li>
                         <a href="#">
-                            <img class="profile-pic header-nav-profile-pic" src="images/profile.jpg" alt="Users Profile Picture" />
+                            <img class="profile-pic" src="images/profile.jpg" alt="Users Profile Picture" />
                         </a>
                     </li>
                     <li>
@@ -60,350 +59,422 @@
     </header>
     <!-- .main-header -->
 
-    <!-- MAIN CONTENT AREA -->
-    <div aria-role="main" class="main-container">
+    <!-- section for app nav and main content -->
+    <div class="section cf">
+        <div class="col-no-margin col-no-left-padding col sm-col-12-12 md-col-2-12 lg-col-1-12">
 
-        <!-- NAVIGATION WEB APP -->
-        <div class="app-navigation-container">
-          <div class="section cf">
-            <div class="col sm-col-12-12">
-                <!-- Navigation -->
-                <nav class="app-navigation">
-                    <ul class="navigation-list">
-                        <!-- Dashboard Icon Link -->
-                        <li>
-                            <a href="#">
-                                <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                      <style type="text/css">
-                        .st0{fill:#FFFFFF;}
-                      </style>
-                      <g id="_x31_0_20_" class="app-navigation-icon dashboard-icon">
-                        <g>
-                          <path class="st0" d="M25,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,16.7,23.3,18,25,18z M24,14h2v2h-2V14z M25,26
-                            c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,24.7,23.3,26,25,26z M24,22h2v2h-2V22z M17,26c1.7,0,3-1.3,3-3
-                            c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,24.7,15.3,26,17,26z M16,22h2v2h-2V22z M28,0H6C3.8,0,2,1.8,2,4v24c0,2.2,1.8,4,4,4h22
-                            c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V8h26V28z M30,6H4V4c0-1.1,0.9-2,2-2h22
-                            c1.1,0,2,0.9,2,2V6z M17,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,16.7,15.3,18,17,18z M16,14h2v2h-2V14z M9,26
-                            c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C6,24.7,7.3,26,9,26z M8,22h2v2H8V22z M9,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3
-                            c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
-                        </g>
-                      </g>
-                    </svg>
-                            </a>
-                        </li>
-                        <!-- Dashboard link item -->
+            <!-- NAVIGATION WEB APP -->
+            <div class="app-navigation-container">
+                <div class="section cf">
+                    <div class="col-no-margin col sm-col-12-12">
+                        <!-- Navigation -->
+                        <nav>
+                            <ul class="navigation-list">
+                                <!-- Dashboard Icon Link -->
+                                <li>
+                                    <a href="#">
+                                        <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                  </style>
+                  <g id="_x31_0_20_">
+                    <g>
+                      <path class="st0" d="M25,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,16.7,23.3,18,25,18z M24,14h2v2h-2V14z M25,26
+                        c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,24.7,23.3,26,25,26z M24,22h2v2h-2V22z M17,26c1.7,0,3-1.3,3-3
+                        c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,24.7,15.3,26,17,26z M16,22h2v2h-2V22z M28,0H6C3.8,0,2,1.8,2,4v24c0,2.2,1.8,4,4,4h22
+                        c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V8h26V28z M30,6H4V4c0-1.1,0.9-2,2-2h22
+                        c1.1,0,2,0.9,2,2V6z M17,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,16.7,15.3,18,17,18z M16,14h2v2h-2V14z M9,26
+                        c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C6,24.7,7.3,26,9,26z M8,22h2v2H8V22z M9,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3
+                        c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
+                    </g>
+                  </g>
+                </svg>
+                                    </a>
+                                </li>
+                                <!-- Dashboard link item -->
 
-                        <li>
-                            <!-- members link item -->
-                            <a href="#">
-                                <svg version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                      <style type="text/css">
-                        .st0{fill:#FFFFFF;}
-                      </style>
-                      <g id="_x37__17_" class="app-navigation-icon members-icon">
-                        <g>
-                          <path class="st0" d="M18,16.4c1.3-1.7,2-3.9,2-6.4c0-5.5-4-10-9-10C6,0,2,4.5,2,10c0,2.4,0.8,4.6,2,6.4c-2.3,0.8-4,3-4,5.6v4
-                            c0,3.3,2.7,6,6,6h10c3.3,0,6-2.7,6-6v-4C22,19.4,20.3,17.2,18,16.4z M4,10c0-4.4,3.1-8,7-8c3.9,0,7,3.6,7,8s-3.1,8-7,8
-                            C7.1,18,4,14.4,4,10z M20,25.5c0,2.5-2.2,4.5-4.9,4.5H6.9C4.2,30,2,28,2,25.5v-3c0-2.1,1.6-3.9,3.8-4.4C7.2,19.3,9,20,11,20
-                            c2,0,3.8-0.7,5.2-1.9c2.2,0.5,3.8,2.2,3.8,4.4V25.5z M23,8h8c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1
-                            C22,7.6,22.4,8,23,8z M31,24h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6c0.6,0,1-0.4,1-1C32,24.4,31.6,24,31,24z M31,12h-8
-                            c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1C32,12.4,31.6,12,31,12z M31,18h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6
-                            c0.6,0,1-0.4,1-1C32,18.4,31.6,18,31,18z"/>
-                        </g>
-                      </g>
-                    </svg>
-                            </a>
-                        </li>
-                        <!-- members link item -->
+                                <li>
+                                    <!-- members link item -->
+                                    <a href="#">
+                                        <svg version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                  </style>
+                  <g id="_x37__17_">
+                    <g>
+                      <path class="st0" d="M18,16.4c1.3-1.7,2-3.9,2-6.4c0-5.5-4-10-9-10C6,0,2,4.5,2,10c0,2.4,0.8,4.6,2,6.4c-2.3,0.8-4,3-4,5.6v4
+                        c0,3.3,2.7,6,6,6h10c3.3,0,6-2.7,6-6v-4C22,19.4,20.3,17.2,18,16.4z M4,10c0-4.4,3.1-8,7-8c3.9,0,7,3.6,7,8s-3.1,8-7,8
+                        C7.1,18,4,14.4,4,10z M20,25.5c0,2.5-2.2,4.5-4.9,4.5H6.9C4.2,30,2,28,2,25.5v-3c0-2.1,1.6-3.9,3.8-4.4C7.2,19.3,9,20,11,20
+                        c2,0,3.8-0.7,5.2-1.9c2.2,0.5,3.8,2.2,3.8,4.4V25.5z M23,8h8c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1
+                        C22,7.6,22.4,8,23,8z M31,24h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6c0.6,0,1-0.4,1-1C32,24.4,31.6,24,31,24z M31,12h-8
+                        c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1C32,12.4,31.6,12,31,12z M31,18h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6
+                        c0.6,0,1-0.4,1-1C32,18.4,31.6,18,31,18z"/>
+                    </g>
+                  </g>
+                </svg>
+                                    </a>
+                                </li>
+                                <!-- members link item -->
 
-                        <li>
-                            <!-- Visits link item -->
-                            <a href="#">
-                                <svg version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                      <style type="text/css">
-                        .st0{fill:#FFFFFF;}
-                      </style>
-                      <g id="_x35__10_" class="app-navigation-icon visits-icon">
-                        <g>
-                          <path class="st0" d="M14,0h-2c-1.1,0-2,0.9-2,2v28c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,29
-                            c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M4,9H2c-1.1,0-2,0.9-2,2v19c0,1.1,0.9,2,2,2h2
-                            c1.1,0,2-0.9,2-2V11C6,9.9,5.1,9,4,9z M4,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V12c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M24,16h-2
-                            c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V18C26,16.9,25.1,16,24,16z M24,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V19
-                            c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z"/>
-                        </g>
-                      </g>
-                    </svg>
-                            </a>
-                        </li>
-                        <!-- visits link item -->
+                                <li>
+                                    <!-- Visits link item -->
+                                    <a href="#">
+                                        <svg version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                  </style>
+                  <g id="_x35__10_">
+                    <g>
+                      <path class="st0" d="M14,0h-2c-1.1,0-2,0.9-2,2v28c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,29
+                        c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M4,9H2c-1.1,0-2,0.9-2,2v19c0,1.1,0.9,2,2,2h2
+                        c1.1,0,2-0.9,2-2V11C6,9.9,5.1,9,4,9z M4,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V12c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M24,16h-2
+                        c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V18C26,16.9,25.1,16,24,16z M24,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V19
+                        c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z"/>
+                    </g>
+                  </g>
+                </svg>
+                                    </a>
+                                </li>
+                                <!-- visits link item -->
 
-                        <li>
-                            <!-- settings link item -->
-                            <a href="#">
-                                <svg version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-                      <style type="text/css">
-                        .st0{fill:#FFFFFF;}
-                      </style>
-                      <g id="_x32__16_">
-                        <g>
-                          <path class="st0" d="M26,24H14.9c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1.1
-                            c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,24.4,26.6,24,26,24z M11,27.4c-1.3,0-2.4-1.1-2.4-2.4
-                            c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,26.3,12.3,27.4,11,27.4z M26,8H14.9c-0.4-1.7-2-3-3.9-3C9.1,5,7.6,6.3,7.1,8H6
-                            C5.4,8,5,8.4,5,9c0,0.6,0.4,1,1,1h1.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,8.4,26.6,8,26,8z M11,11.4
-                            c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,10.3,12.3,11.4,11,11.4z M26,16h-2.1
-                            c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h10.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26
-                            c0.6,0,1-0.4,1-1C27,16.4,26.6,16,26,16z M20,19.4c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4
-                            C22.4,18.3,21.3,19.4,20,19.4z M28,0H4C1.8,0,0,1.8,0,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28
-                            c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2V28z"/>
-                        </g>
-                      </g>
-                    </svg>
-                            </a>
-                        </li>
-                        <!-- settings link item -->
-                    </ul>
-                    <!-- .navigation-links -->
-                </nav>
-                <!-- .app-navigation -->
+                                <li>
+                                    <!-- settings link item -->
+                                    <a href="#">
+                                        <svg version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#FFFFFF;}
+                  </style>
+                  <g id="_x32__16_">
+                    <g>
+                      <path class="st0" d="M26,24H14.9c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1.1
+                        c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,24.4,26.6,24,26,24z M11,27.4c-1.3,0-2.4-1.1-2.4-2.4
+                        c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,26.3,12.3,27.4,11,27.4z M26,8H14.9c-0.4-1.7-2-3-3.9-3C9.1,5,7.6,6.3,7.1,8H6
+                        C5.4,8,5,8.4,5,9c0,0.6,0.4,1,1,1h1.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,8.4,26.6,8,26,8z M11,11.4
+                        c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,10.3,12.3,11.4,11,11.4z M26,16h-2.1
+                        c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h10.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26
+                        c0.6,0,1-0.4,1-1C27,16.4,26.6,16,26,16z M20,19.4c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4
+                        C22.4,18.3,21.3,19.4,20,19.4z M28,0H4C1.8,0,0,1.8,0,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28
+                        c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2V28z"/>
+                    </g>
+                  </g>
+                </svg>
+                                    </a>
+                                </li>
+                                <!-- settings link item -->
+                            </ul>
+                            <!-- .navigation-links -->
+                        </nav>
+                        <!-- end of nav -->
+                    </div>
+                    <!-- col container -->
+                </div>
+                <!-- section div -->
             </div>
-            <!-- col container -->
-          </div>
-          <!-- section div -->
+            <!--  app-navigation-container -->
         </div>
+        <!-- col for large screen layout -->
 
-        <!-- section .app-navigation-container -->
-        <div class="app-search">
-          <div class="section cf">
-              <!-- DASHBOARD TITLE AND SEARCH SECTION -->
-              <div class="sm-col-5-12 col-mobile">
-                  <h2 class="section-title dashboard-title">Dashboard</h2>
+
+
+        <div class="col sm-col-12-12 md-col-10-12 lg-col-11-12 col-no-top-margin col-no-left-padding col-no-right-padding">
+            <!-- MAIN CONTENT AREA -->
+            <main class="main-container">
+
+                <!-- section .app-navigation-container -->
+                <div class="app-search">
+                    <div class="section cf">
+                        <!-- DASHBOARD TITLE AND SEARCH SECTION -->
+                        <div class="sm-col-5-12 col">
+                            <h2 class="section-title dashboard-title">Dashboard</h2>
+                        </div>
+
+                        <div class="sm-col-7-12 col">
+                            <div class="dashboard-search-container cf thin-border">
+                                <input id="searchBar" type="search" name="search-bar" placeholder="Search" />
+                            </div>
+                            <!-- .dashboard-search-container -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- .section -->
+                </div>
+                <!-- app serach -->
+
+                <!-- USER ALERT SECTION -->
+                <div class="user-alert-container">
+                    <div class="section cf">
+                        <div class="col sm-col-12-12 lg-col-6-12">
+                            <p class="user-alert-message">
+                                <strong>Alert</strong> You have 2 new likes on your recent post!
+                            </p>
+                            <span class="close-alert">x</span>
+                            <!-- .user-alert-message -->
+                        </div>
+                        <!-- col div -->
+                    </div>
+                    <!-- section -->
+                </div>
+                <!-- user-alert-container -->
+
+                <!-- LINE GRAPH TRAFFIC CHART DATA SECTION -->
+                <div class="section cf">
+                    <section class="line-chart-traffic-container col sm-col-12-12">
+                        <h3 class="section-title col sm-col-4-12">Traffic</h3>
+                        <div class="nav-traffic-container col sm-col-8-12">
+                        <ul class="nav-traffic-widget cf">
+                          <li><a href="">Hourly</a></li>
+                          <li><a href="">Daily</a></li>
+                          <li><a href="">Weekly</a></li>
+                          <li><a href="">Monthly</a></li>
+                        </ul>
+                        </div>
+                        <!-- Line chart.js here -->
+                        <!-- Placehold.it img -->
+                        <canvas id="myLineChart" class="col sm-12-12" width="400" height="200"></canvas>
+                        <!-- <img src="http://placehold.it/800x350" alt="line graph"> -->
+                    </section>
+
+                    <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
+                    <section class="line-chart-traffic-container thin-section-border col-no-bottom-margin col sm-col-12-12 lg-col-6-12">
+                        <h3 class="section-title">Daily Traffic</h3>
+                        <!-- bar graph chart.js here -->
+                        <canvas id="myBarChart" width="300" height="150"></canvas>
+                        <!-- Placehold.it img -->
+                        <!-- <img src="http://placehold.it/400x350" alt="line graph"> -->
+                    </section>
+
+                    <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
+                    <section class="line-chart-traffic-container thin-section-border col-no-bottom-margin col sm-col-12-12 lg-col-6-12">
+                        <h3 class="section-title">Mobile Users</h3>
+                        <!-- doughnut graph chart.js here -->
+                        <canvas id="myPieChart" width="300" height="150"></canvas>
+                        <!-- Placehold.it img -->
+                        <!-- <img src="http://placehold.it/400x350" alt="line graph"> -->
+                    </section>
+                </div>
+                <!-- .section -->
+
+                <!-- SOCIAL STATS CONTAINER -->
+                <div class="social-stats-container thin-section-border section cf">
+                    <div class="col sm-col-12-12 col-no-right-padding">
+                        <h3 class="section-title">Social Stats</h3>
+
+                        <!-- TWITTER BLOCK ITEM -->
+                        <div class="section cf">
+                            <div class="social-block social-block-twitter thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-twitter.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Twitter</h4>
+                                <span class="social-stat-count">10,345</span>
+                            </div>
+                            <!-- .social-block-twitter -->
+
+                            <!-- FACEBOOK BLOCK ITEM -->
+                            <div class="social-block social-block-facebook thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-facebook.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Facebook</h4>
+                                <span class="social-stat-count">18,739</span>
+                            </div>
+                            <!-- .social-block-facebook -->
+
+                            <!-- GOOGLE+ BLOCK ITEM -->
+                            <div class="social-block social-block-google thin-border col sm-col-12-12 md-col-4-12">
+                                <div class="social-icon-container">
+                                    <img class="svg social-icon" src="icons/icon-google-plus.svg" alt="">
+                                </div>
+                                <h4 class="social-block-title text-light-purple">Google+</h4>
+                                <span class="social-stat-count">12,530</span>
+                            </div>
+                            <!-- .social-block-google -->
+                        </div>
+                        <!-- .section cf -->
+                    </div>
+                    <!-- col sm-col-12-12 -->
+                </div>
+                <!-- .social-stats-container -->
+
+                <!-- NEW MEMBERS SECTION -->
+                <div class="members-new-active-container thin-section-border">
+                    <div class="section cf">
+                        <div class="members-list-container col sm-col-12-12 lg-col-6-12">
+                            <h3 class="section-title members-list-title">New Members</h3>
+                            <ul class="members-list">
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="user-name">Victoria Chambers</span>
+                                    <a class="user-email" href="#">victoria.chambers89@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
+
+                                </li>
+
+                                <li>
+                                    <!-- Add Pic -->
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <span class="user-name">Dale Byrd</span>
+                                    <a class="user-email" href="#">dale.byrd52@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
+
+                                </li>
+
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="user-name">Kris Osborne</span>
+                                    <a class="user-email" href="#">kris.osborne06@example.com</a>
+                                    <span class="user-join-date">10/15/17</span>
+
+                                </li>
+
+                                <li>
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <span class="user-name">Stephanie Haramut</span>
+                                    <a class="user-email" href="#">steph.haramut7@example.com</a>
+                                    <span class="user-join-date">07/07/17</span>
+
+                                </li>
+
+                            </ul>
+                            <!-- .new-members-list -->
+                        </div>
+                            <hr class="hr" />
+                        <!-- RECENT ACTIVITY SECTION -->
+                        <div class="members-list-container col sm-col-12-12 lg-col-6-12">
+                            <h3 class="section-title members-list-title">Recent Activity</h3>
+                            <ul class="members-list active-members">
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="user-name">Victoria Chambers</span> commented on
+                                        <strong>YourApp&apos;s SEO Tips</strong>
+                                        <span class="comment-time">4 hours ago</span>
+                                    </p>
+                                    <span class="user-join-date arrow">&gt;</span>
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="user-name">Dale Byrd</span> liked the post
+                                        <strong>Facebook&apos;s Changes for 2016</strong>
+                                        <span class="comment-time">6 hours ago</span>
+                                    </p>
+                                    <span class="user-join-date arrow">&gt;</span>
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+                                    <p>
+                                        <span class="user-name">Kris Osborne</span> commented on
+                                        <strong>Facebook&apos;s Changes for 2016</strong>
+                                        <span class="comment-time">1 day ago</span>
+                                    </p>
+                                    <span class="user-join-date arrow">&gt;</span>
+
+                                </li>
+
+                                <li class="cf">
+                                    <img class="member-pic" src="images/friend.jpg" alt="">
+                                    <!-- Add Pic -->
+
+                                    <p>
+                                        <span class="user-name">Stephanie Haramut</span> posted on
+                                        <strong>YourApp&apos;s Photo Tips</strong>
+                                        <span class="comment-time">1 week ago</span>
+                                    </p>
+                                    <span class="user-join-date arrow">&gt;</span>
+
+
+
+                                </li>
+
+                            </ul>
+                            <!-- .new-members-list -->
+                        </div>
+                        <!-- .members-list-container -->
+                    </div>
+                    <!-- .section -->
+                </div>
+                <!-- members-new-active-container -->
+
+                <!-- MESSAGE USER SECTION -->
+                <div class="section cf">
+                <div class="message-user-container thin-section-border col sm-col-12-12 lg-col-6-12">
+                  <form class="form-contact-user" autocomplete="on" method="post">
+                    <h3 class="section-title form-title">Message User</h3>
+
+                    <input class="input-element user-search thin-border form-text-style" type="search" id="userSearch" name="user-search" placeholder="Search for User">
+
+                    <textarea class="input-element msg thin-border form-text-style" placeholder="Message for User"></textarea>
+
+                    <button class="submit-btn btn form-text-style" type="submit">Send</button>
+                  </form>
+                </div>
+                <!-- .message-user-container -->
+
+                <!-- APP SETTINGS SECTION -->
+                <div class="app-settings-container thin-section-border col sm-col-12-12 lg-col-6-12">
+                    <h3 class="section-title form-title">Settings</h3>
+
+                    <div class="option-container">
+                        <span class="settings-info form-text-style">Send Email Notifications</span>
+                        <label class="switch" onclick="">
+                          <input type="checkbox">
+                          <span class="slider round">
+                          <span class="on-state">On</span>
+                          <span class="off-state">Off</span>
+                        </span>
+                        </label>
+                    </div>
+
+                      <div class="option-container">
+                        <span class="form-text-style">Set Profile to Public</span>
+                        <!-- Rounded switch -->
+                        <label class="switch" onclick="">
+                          <input type="checkbox">
+                          <span class="slider round">
+                            <span class="on-state">On</span>
+                            <span class="off-state">Off</span>
+                          </span>
+                        </label>
+                      </div>
+
+                  <!-- .option-container -->
+
+                        <!-- TIME ZONE SELCTION -->
+                      <div class="option-container">
+                        <select id="timezone-select" class="input-element form-text-style" name="timezone" size="1">
+                          <option selected disabled>Select Timezone</option>
+                          <option>Eastern Standard</option>
+                        </select>
+                    </div>
+                    <!-- .option-container -->
+
+                    <button class="settings-btn save-btn btn form-text-style">Save</button>
+                    <button class="settings-btn close-btn btn form-text-style">Cancel</button>
+
+                </div>
+                <!-- .app-settings-container -->
               </div>
-
-              <div class="sm-col-7-12 col-mobile">
-                  <div class="dashboard-search-container cf">
-                      <input id="searchBar" type="search" name="search-bar" placeholder="Search" />
-                  </div>
-                  <!-- .dashboard-search-container -->
-              </div>
-              <!-- col -->
-          </div>
-          <!-- .section -->
-        </div>  <!-- app serach -->
-
-        <!-- USER ALERT SECTION -->
-        <div class="user-alert-container">
-          <div class="section cf">
-            <div class="col sm-col-12-12">
-              <p class="user-alert-message">
-                <strong>Alert</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <span class="close-alert">x</span>
-            <!-- .user-alert-message -->
-            </div>
-            <!-- col div -->
-          </div>
-          <!-- section -->
+              <!-- .section -->
+            </main>
+            <!-- main -->
         </div>
-        <!-- user-alert-container -->
-
-        <!-- LINE GRAPH TRAFFIC CHART DATA SECTION -->
-        <section class="line-chart-traffic-container">
-            <h3 class="section-title">Traffic</h3>
-            <!-- Line chart.js here -->
-            <!-- Placehold.it img -->
-            <img src="http://placehold.it/800x350" alt="line graph">
-        </section>
-
-        <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
-        <section class="line-chart-traffic-container">
-            <h3 class="section-title">Daily Traffic</h3>
-            <!-- bar graph chart.js here -->
-            <!-- Placehold.it img -->
-            <img src="http://placehold.it/400x350" alt="line graph">
-        </section>
-
-        <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
-        <section class="line-chart-traffic-container">
-            <h3 class="section-title">Daily Traffic</h3>
-            <!-- doughnut graph chart.js here -->
-            <!-- Placehold.it img -->
-            <img src="http://placehold.it/400x350" alt="line graph">
-        </section>
-
-        <!-- SOCIAL STATS CONTAINER -->
-        <div class="social-stats-container">
-
-            <h3 class="section-title">Social Stats</h3>
-
-            <div class="social-block-items">
-
-                <!-- TWITTER BLOCK ITEM -->
-                <div class="social-block social-block-twitter">
-                    <h4 class="social-block-title">Twitter</h4>
-                    <!-- <img class="social-icon" src="icons/icon-twitter.svg" alt="twitter icon"> -->
-                    <span class="social-stat-count">10,345</span>
-                </div>
-                <!-- .social-block-twitter -->
-
-                <!-- FACEBOOK BLOCK ITEM -->
-                <div class="social-block social-block-facebook">
-                    <h4 class="social-block-title">Facebook</h4>
-                    <!-- <img class="social-icon" src="icons/icon-facebook.svg" alt="facebook icon"> -->
-                    <span class="social-stat-count">18,739</span>
-                </div>
-                <!-- .social-block-facebook -->
-
-                <!-- GOOGLE+ BLOCK ITEM -->
-                <div class="social-block social-block-google">
-                    <h4 class="social-block-title">Google+</h4>
-                    <!-- <img class="social-icon" src="icons/icon-google-plus.svg" alt="google-plus icon"> -->
-                    <span class="social-stat-count">2,530</span>
-                </div>
-                <!-- .social-block-google -->
-
-            </div>
-            <!-- .social-block-items -->
-
-        </div>
-        <!-- .social-stats-container -->
-
-        <!-- NEW MEMBERS SECTION -->
-        <div class="members-list-container">
-            <h3 class="section-title members-list-title">New Members</h3>
-            <ul class="members-list">
-                <li>
-                    <!-- Add Pic -->
-                    <span class="users-name">Victoria Chambers</span>
-                    <a class="user-email" href="#">user@example.com</a>
-                    <span class="user-join-date">10/15/17</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <span class="users-name">Dale Byrd</span>
-                    <a class="user-email" href="#">user@example.com</a>
-                    <span class="user-join-date">10/15/17</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <span class="users-name">Kris Osborne</span>
-                    <a class="user-email" href="#">user@example.com</a>
-                    <span class="user-join-date">10/15/17</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <span class="users-name">Stephaie Haramut</span>
-                    <a class="user-email" href="#">user@example.com</a>
-                    <span class="user-join-date">07/07/17</span>
-
-                </li>
-
-            </ul>
-            <!-- .new-members-list -->
-        </div>
-
-        <!-- RECENT ACTIVITY SECTION -->
-        <div class="members-list-container">
-            <h3 class="section-title members-list-title">Recent Activity</h3>
-            <ul class="members-list">
-
-                <li>
-                    <!-- Add Pic -->
-                    <p>
-                        <span class="users-name">Victoria Chambers</span> commented on
-                        <strong>YourApp&apos;s SEO Tips</strong>
-                    </p>
-                    <span class="comment-time">4 hours ago</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <p>
-                        <span class="users-name">Dale Byrd</span> liked the post
-                        <strong>Facebook&apos;s Changes for 2016</strong>
-                    </p>
-                    <span class="comment-time">6 hours ago</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <p>
-                        <span class="users-name">Kris Osborne</span> commented on
-                        <strong>Facebook&apos;s Changes for 2016</strong>
-                    </p>
-                    <span class="comment-time">1 day ago</span>
-
-                </li>
-
-                <li>
-                    <!-- Add Pic -->
-                    <p>
-                        <span class="users-name">Stephanie Haramut</span> posted on
-                        <strong>YourApp&apos;s Photo Tips</strong>
-                    </p>
-                    <span class="comment-time">1 week ago</span>
-
-                </li>
-
-            </ul>
-            <!-- .new-members-list -->
-        </div>
-
-        <!-- MESSAGE USER SECTION -->
-        <div class="message-user-container">
-            <h3 class="section-title">Message User</h3>
-
-            <input class="input-element" type="search" id="userSearch" name="user-search" placeholder="Search for User">
-
-            <textarea class="input-element" placeholder="Message for User" cols="30" rows="5"></textarea>
-
-            <button class="submit-btn btn" type="submit">Send</button>
-        </div>
-        <!-- .message-user-container -->
-
-        <!-- APP SETTINGS SECTION -->
-        <div class="app-settings-container">
-            <h3 class="section-title">Settings</h3>
-
-            <div class="option-container">
-                <span class="settings-info">Send Email Notifications</span>
-                <!-- Rounded switch -->
-                <label class="switch">
-                      <input type="checkbox">
-                    </label>
-            </div>
-
-            <div class="option-container">
-                <span class="settings-info">Set Profile to Public</span>
-                <!-- Rounded switch -->
-                <label class="switch">
-                      <input type="checkbox">
-                    </label>
-
-                <!-- TIME ZONE SELCTION -->
-                <select id="timezone-select" name="timezone" size="1">
-                      <option selected disabled>Select Timezone</option>
-                      <option>Eastern Standard</option>
-                    </select>
-
-                <button class="settings-btn save-btn btn">Save</button>
-                <button class="settings-btn save-btn btn">Cancel</button>
-            </div>
-            <!-- .option-container -->
-
-        </div>
-        <!-- .app-settings-container -->
+        <!-- .col -->
     </div>
-    </div>
-    <!-- #main-container -->
-
+    <!-- section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
