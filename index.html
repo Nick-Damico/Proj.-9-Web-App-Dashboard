@@ -411,11 +411,15 @@
                 <div class="section cf">
                 <div class="message-user-container thin-section-border col sm-col-12-12 lg-col-6-12">
                   <form class="form-contact-user" autocomplete="on" method="post">
+                    <!-- Confimation Modal -->
+                    <div class="form-confirm-msg">
+                      <!-- <p>Your Msg to <br/><strong>Kris Osborne</strong><br/> has been sent!</p> -->
+                    </div>
                     <h3 class="section-title form-title">Message User</h3>
 
-                    <input class="input-element user-search thin-border form-text-style" type="search" id="userSearch" name="user-search" placeholder="Search for User">
+                    <input class="input-element user-search thin-border form-text-style" type="search" id="userSearch" name="user-search" placeholder="Search for User" required>
 
-                    <textarea class="input-element msg thin-border form-text-style" placeholder="Message for User"></textarea>
+                    <textarea id="msgToUser" class="input-element msg thin-border form-text-style" placeholder="Message for User" required></textarea>
 
                     <button class="submit-btn btn form-text-style" type="submit">Send</button>
                   </form>

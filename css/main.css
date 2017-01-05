@@ -504,7 +504,7 @@ NEW / ACTIVE MEMBERS AREA
      transform-origin: center;
  }
  /***************************
-Message User / App Settings
+Form Message User / Form App Settings
 ****************************/
 
  .message-user-container, .app-settings-container {
@@ -513,9 +513,35 @@ Message User / App Settings
      padding-top: 30px;
      padding-bottom: 40px;
  }
+
+
  .message-user-container {
    border-right: 1px solid #e6e6e6;
  }
+
+.form-contact-user {
+  position: relative;
+}
+
+/* FORM CONFIRM MODAL */
+
+.form-confirm-msg {
+  position: absolute;
+  color: #f7f7f7;
+  background: #65a2b2;
+  border: 2px solid #5e62b3;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 1.6%;
+  text-align: center;
+  width: 90%;
+  height: 40%;
+  top: 20px;
+  left: 20px;
+}
+
+/* End of Confirm modal */
 
  .form-title {
      padding-top: 10px;

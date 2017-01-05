@@ -1,4 +1,3 @@
-
 /////////////////////////////////////////////////////
 // Element Global Variables
 /////////////////////////////////////////////////////
@@ -19,7 +18,7 @@ var myChart = new Chart(Linectx, {
     data: {
         labels: ["16-22", "22-39", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [{
-          data: [750,1250,1000,1500,2000,1500,1750,1250,1750,2000,1750,2250],
+            data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2250],
             lineTension: 0,
             pointBorderColor: 'rgba(150, 132, 208, 1)',
             pointRadius: 4,
@@ -46,11 +45,11 @@ var myChart = new Chart(Linectx, {
         }]
     },
     options: {
-      responsive: true,
+        responsive: true,
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero: true
                 }
             }]
         }
@@ -64,7 +63,7 @@ var myChart = new Chart(Linectx, {
 var myBarChart = new Chart(Barctx, {
     type: 'bar',
     data: {
-        labels: ["S","M","T","W","T","F","S"],
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
         datasets: [{
             label: ["Mobile Views", "Desktop Views"],
             data: [50, 75, 175, 125, 225, 180, 100],
@@ -92,7 +91,7 @@ var myBarChart = new Chart(Barctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero: true
                 }
             }]
         }
@@ -123,9 +122,9 @@ var myPieChart = new Chart(Piectx, {
         }]
     },
     options: {
-      legend: {
-        position: "right",
-      }
+        legend: {
+            position: "right",
+        }
     }
 
 });
@@ -136,13 +135,50 @@ var myPieChart = new Chart(Piectx, {
 
 // REMOVES ALERT MSG FROM PAGE ON CLICK
 $alertCloseBtn.on('click', function() {
-  $this = $(this);
-  elGreatGrandparent = $this.parent().parent().parent();
-  elGreatGrandparent.fadeOut(1500);
+    $this = $(this);
+    elGreatGrandparent = $this.parent().parent().parent();
+    elGreatGrandparent.fadeOut(1500);
 });
 
 //  ADD LIGHT TO BELL.SVG ICON IF THERE ARE MSGS.
 
 /////////////////////////////////////////////////////
-//
+//  FORM VALIDATION
 /////////////////////////////////////////////////////
+$(".form-confirm-msg").hide();
+
+$('button.submit-btn').on('click', function(e) {
+    // Stop Submit page refresh on click.
+    e.preventDefault();
+    //  Modal container
+    var $container = $('.form-confirm-msg');
+    // Variables for input fields
+    var $userInput = $('#userSearch');
+    var $msgUser = $('#msgToUser');
+    //  Build msg for modal.
+    var msg = "";
+    //  Check if either input fields are empty.
+    if ($msgUser.val() !== "" && $userInput.val() !== "") {
+      // Get Msg recipent Name
+      var user = $('#userSearch').val();
+      msg += '<p>Your Msg to';
+      msg += '<br/><strong> ';
+      msg += user + ' </strong><br/>';
+      msg += "has been sent!";
+    } else {
+      msg += '<p>Please Complete the form with a<br/> <strong>User Name</strong> and <strong>Message</strong></p>';
+    }
+
+    // Build msg sent confimation modal.
+    $container.prepend(msg).fadeIn().delay(2000).fadeOut(function(e) {
+      $(this).text("");
+    });
+    // Clear #userSearch input.
+    $userInput.val("");
+    // Clear #msgToUser textarea.
+    $msgUser.val("");
+    //  Clear modal message.
+    // $container.text('');
+    msg = "";
+
+});
