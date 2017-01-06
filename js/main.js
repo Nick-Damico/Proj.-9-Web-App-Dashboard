@@ -10,6 +10,23 @@ var Barctx = document.getElementById('myBarChart').getContext("2d");
 // Doughnut Chart Canvas El.
 var Piectx = document.getElementById('myPieChart').getContext("2d");
 
+
+
+/////////////////////////////////////////////////////
+// Functions
+/////////////////////////////////////////////////////
+
+function displayModal(msg) {
+  var $container = $('.form-confirm-msg');
+
+  $container.prepend(msg)
+            .fadeIn()
+            .delay(2500)
+            .fadeOut(function(e) {
+              $(this).text("");
+            })
+}
+
 /////////////////////////////////////////////////////
 // Line Chart Widget
 /////////////////////////////////////////////////////
@@ -151,7 +168,7 @@ $('button.submit-btn').on('click', function(e) {
     // Stop Submit page refresh on click.
     e.preventDefault();
     //  Modal container
-    var $container = $('.form-confirm-msg');
+
     // Variables for input fields
     var $userInput = $('#userSearch');
     var $msgUser = $('#msgToUser');
@@ -160,25 +177,32 @@ $('button.submit-btn').on('click', function(e) {
     //  Check if either input fields are empty.
     if ($msgUser.val() !== "" && $userInput.val() !== "") {
       // Get Msg recipent Name
-      var user = $('#userSearch').val();
-      msg += '<p>Your Msg to';
+      var user = $userInput.val();
+      msg += '<p>Your message to';
       msg += '<br/><strong> ';
       msg += user + ' </strong><br/>';
       msg += "has been sent!";
+      //  Display msg in modal.
+      displayModal(msg);
+      //  clear user name input
+      $userInput.val("");
+      //  clear textarea input.
+      $msgUser.val("");
     } else {
       msg += '<p>Please Complete the form with a<br/> <strong>User Name</strong> and <strong>Message</strong></p>';
+      displayModal(msg);
     }
-
-    // Build msg sent confimation modal.
-    $container.prepend(msg).fadeIn().delay(2000).fadeOut(function(e) {
-      $(this).text("");
-    });
-    // Clear #userSearch input.
-    $userInput.val("");
-    // Clear #msgToUser textarea.
-    $msgUser.val("");
-    //  Clear modal message.
-    // $container.text('');
     msg = "";
-
 });
+
+
+
+/////////////////////////////////////////////////////
+//  APP SETTINGS ( LOCAL STORAGE )
+/////////////////////////////////////////////////////
+
+if (typeof(Storage) !== "undefined") {
+    console.log("storage");
+} else {
+    console.log("no storage");
+}
