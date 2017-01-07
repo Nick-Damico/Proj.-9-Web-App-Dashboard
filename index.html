@@ -434,8 +434,8 @@
                         <div class="option-container">
                             <span class="settings-info form-text-style">Send Email Notifications</span>
                             <label class="switch" onclick="">
-                          <input type="checkbox">
-                          <span id="emailSwitch" class="slider round">
+                          <input id="emailNotification" type="checkbox" name="email-switch">
+                          <span class="slider round">
                           <span class="on-state">On</span>
                           <span class="off-state">Off</span>
                         </span>
@@ -446,8 +446,8 @@
                             <span class="form-text-style">Set Profile to Public</span>
                             <!-- Rounded switch -->
                             <label class="switch" onclick="">
-                          <input type="checkbox">
-                          <span id="privacySwitch" class="slider round">
+                          <input id="profilePrivacy" type="checkbox">
+                          <span class="slider round">
                             <span class="on-state">On</span>
                             <span class="off-state">Off</span>
                           </span>
@@ -495,7 +495,7 @@
                         </div>
                         <!-- .option-container -->
 
-                        <button class="settings-btn save-btn btn form-text-style">Save</button>
+                        <button id="saveBtn" class="settings-btn save-btn btn form-text-style">Save</button>
                         <button class="settings-btn close-btn btn form-text-style">Cancel</button>
 
                     </div>
