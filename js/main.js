@@ -7,7 +7,6 @@
   // 1. Add message response to users click on 'save' btn in settings widget.
   // 2. refactor Alert Msg.
 
-
 // iife function
 $(function() {
 
@@ -80,11 +79,6 @@ $(function() {
         $this.parent().fadeOut(1000);
     });
 
-    function AlertMsgBuilder() {
-
-
-    }
-
     $('#alertLink').on('click', function(e) {
       var $userAlertBox = $('.user-alert-inner-container');
       $userAlertBox.show();
@@ -104,58 +98,79 @@ $(function() {
       }
     });
 
-    /////////////////////////////////////////////////////
-    //
-    /////////////////////////////////////////////////////
-
 
 
     /////////////////////////////////////////////////////
-    // Line Chart Widget
+    // Line Chart Widget / Monthly, Weekly, Daily, Hourly
     /////////////////////////////////////////////////////
 
+    //  HOURLY TRAFFIC CHART
+    var hourlyChartData =  [20, 200, 425, 850, 1000, 750, 200, 800, 583, 1203, 1101, 2502];
+
+    //  DAILY TRAFFIC CHART
+    var dailyChartData =  [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2250];
+
+    //  WEEKLY CHART DATA
+    var weeklyChartData = [1750, 2250, 2000, 2500, 3000, 4500, 5750, 4250, 6750, 4000, 3750, 4250];
+
+    //  MONTHLY CHART DATA
+    var monthlyChartData = [10750, 21250, 21000, 12500, 13000, 14500, 15750, 14250, 16750, 14000, 13750, 14250];
+
+
+    //  CLICK EVENTS FOR TRAFFIC DATA
+    $('#hourlyData').on('click', function(e) {
+      e.preventDefault();
+      myChart.data.datasets[0].data = hourlyChartData;
+      myChart.update();
+    });
+
+    $('#dailyData').on('click', function(e) {
+      e.preventDefault();
+      myChart.data.datasets[0].data = dailyChartData;
+      myChart.update();
+    });
+
+    $('#weeklyData').on('click', function(e) {
+      e.preventDefault();
+      myChart.data.datasets[0].data = weeklyChartData;
+      myChart.update();
+    });
+
+    $('#monthlyData').on('click', function(e) {
+      e.preventDefault();
+      myChart.data.datasets[0].data = monthlyChartData;
+      myChart.update();
+    });
+
+
+    ///////////////////////////////////
+    //  LINE CHART CONSTRUCTOR
+    //////////////////////////////////
     var myChart = new Chart(Linectx, {
         type: 'line',
         data: {
             labels: ["16-22", "22-39", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
             datasets: [{
-                data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2250],
+                data: hourlyChartData, // DATA UPDATE ON CLICK EVENTS
                 lineTension: 0,
                 pointBorderColor: 'rgba(150, 132, 208, 1)',
                 pointRadius: 4,
                 pointBorderWidth: 2,
                 pointBackgroundColor: '#fff',
-                backgroundColor: [
-                    'rgba(150, 132, 208, 0.2)'
-                    // 'rgba(255, 99, 132, 0.2)',
-                    // 'rgba(54, 162, 235, 0.2)',
-                    // 'rgba(255, 206, 86, 0.2)',
-                    // 'rgba(75, 192, 192, 0.2)',
-                    // 'rgba(153, 102, 255, 0.2)',
-                    // 'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(150, 132, 208, 1)'
-                    // 'rgba(54, 162, 235, 1)',
-                    // 'rgba(255, 206, 86, 1)',
-                    // 'rgba(75, 192, 192, 1)',
-                    // 'rgba(153, 102, 255, 1)',
-                    // 'rgba(255, 159, 64, 1)'
-                ],
+                backgroundColor: 'rgba(150, 132, 208, 0.4)',
+                borderColor: 'rgba(150, 132, 208, 1)',
                 borderWidth: 2
             }]
-        },
+        }, // CHART DATA VARIABLES ADDED HERE
         options: {
             responsive: true,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+            legend: {
+              display: false,
             }
-        }
+          }
     });
+
+
 
     /////////////////////////////////////////////////////
     // Bar Chart Widget
@@ -165,37 +180,25 @@ $(function() {
         type: 'bar',
         data: {
             labels: ["S", "M", "T", "W", "T", "F", "S"],
-            datasets: [{
-                label: ["Mobile Views", "Desktop Views"],
+            datasets: [
+              {
+                label: 'Desktop Users',
                 data: [50, 75, 175, 125, 225, 180, 100],
-                backgroundColor: [
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)'
-                ],
-                borderColor: [
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)',
-                    'rgba(94, 98, 179, 1)'
-                ],
+                backgroundColor: 'rgba(94, 98, 179, 1)',
+                borderColor: 'rgba(94, 98, 179, 1)',
                 borderWidth: 1
-            }]
+            },
+            {
+              type: 'bar',
+                label: 'Mobile Users',
+                data: [150, 95, 205, 245, 255, 210, 160],
+                backgroundColor: 'rgba(101, 162, 178, 1)',
+                borderColor: 'rgba(101, 162, 178, 1)',
+            }
+          ]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
+
         }
     });
 
@@ -206,18 +209,20 @@ $(function() {
     var myPieChart = new Chart(Piectx, {
         type: 'doughnut',
         data: {
-            labels: ["Desktop", "Phones", "Tablets"],
+            labels: ["Desktop", "Phones", "Tablets", "Consoles"],
             datasets: [{
-                data: [10345, 12953, 5600],
+                data: [7798, 10828, 5420, 3425],
                 backgroundColor: [
                     'rgba(90, 93, 167, 1)',
                     'rgba(101, 162, 178, 1)',
-                    'rgba(118, 191, 122, 1)'
+                    'rgba(118, 191, 122, 1)',
+                    'rgba(191, 120, 120, 1)'
                 ],
                 borderColor: [
                     'rgba(90, 93, 167, 1)',
                     'rgba(101, 162, 178, 1)',
-                    'rgba(118, 191, 122, 1)'
+                    'rgba(118, 191, 122, 1)',
+                    'rgba(191, 120, 120, 1)'
                 ],
                 borderWidth: 1
             }]
@@ -231,14 +236,9 @@ $(function() {
 
 
 
-
-
-    //  ADD LIGHT TO BELL.SVG ICON IF THERE ARE MSGS.
-
     /////////////////////////////////////////////////////
     //  FORM VALIDATION
     /////////////////////////////////////////////////////
-
 
     $('button.submit-btn').on('click', function(e) {
         // Stop Submit page refresh on click.
@@ -264,9 +264,9 @@ $(function() {
             //  clear textarea input.
             $msgUser.val("");
         } else {
-            msg += '<p>Please Complete the form with a';
-            msg += '<br/> <strong>User Name</strong>';
-            msg += 'and <strong>Message</strong></p>';
+            msg += '<p>Please Complete the form with a ';
+            msg += '<br/><strong>User Name</strong>';
+            msg += ' and <strong>Message</strong></p>';
             displayModal(msg);
         }
         //  clear msg

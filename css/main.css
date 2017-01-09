@@ -120,7 +120,7 @@ RESPONSIVE GRID
          width: 32.26%;
      }
      .md-col-6-12 {
-         width: 50%;
+         width: 49%;
      }
      .md-col-10-12 {
          width: 88%;
@@ -344,7 +344,7 @@ ALERT SECTION
     border-radius: 50%;
     font-size: 1.25rem;
     line-height: 1.38rem;
-    padding-left: 2px;  
+    padding-left: 2px;
     font-weight: 500;
     transition: transform .4s;
  }
