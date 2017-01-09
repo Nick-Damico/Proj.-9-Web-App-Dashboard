@@ -2,19 +2,17 @@
 <html class="no-js" lang="en">
 
 <head>
-    <!-- MASTER BRANCH -->
     <meta charset="utf-8">
     <title>Project 9: Web App Dashboard</title>
     <meta name="description" content="Treehouse Front End Techdegree Project 9 Web App Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Font Links -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,700" rel="stylesheet">
-
+    <!-- StyleSheet Links -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <!-- Script Links -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
 </head>
 
 <body>
@@ -204,11 +202,12 @@
                 <!-- USER ALERT SECTION -->
                 <div class="user-alert-container">
                     <div class="section cf">
-                        <div class="col sm-col-12-12 lg-col-6-12">
+                        <div class="user-alert-inner-container col sm-col-12-12 lg-col-12-12">
                             <p class="user-alert-message">
-                                <strong>Alert</strong> You have 2 new likes on your recent post!
+                                <strong>Alert</strong> You have 2 New Notifications, click bell-icon to see!
+                                <span class="close-alert">x</span>
                             </p>
-                            <span class="close-alert">x</span>
+
                             <!-- .user-alert-message -->
                         </div>
                         <!-- col div -->
@@ -220,37 +219,34 @@
                 <!-- LINE GRAPH TRAFFIC CHART DATA SECTION -->
                 <div class="section cf">
                     <section class="line-chart-traffic-container col sm-col-12-12">
-                        <h3 class="section-title col sm-col-4-12">Traffic</h3>
-                        <div class="nav-traffic-container col sm-col-8-12">
+                        <h3 class="section-title col sm-col-4-12 lg-col-6-12">Traffic</h3>
+                        <div class="nav-traffic-container col sm-col-12-12 lg-col-6-12">
                             <ul class="nav-traffic-widget cf">
-                                <li><a href="">Hourly</a></li>
+                                <li class="selected"><a href="">Hourly</a></li>
                                 <li><a href="">Daily</a></li>
                                 <li><a href="">Weekly</a></li>
                                 <li><a href="">Monthly</a></li>
                             </ul>
                         </div>
-                        <!-- Line chart.js here -->
-                        <!-- Placehold.it img -->
+
                         <canvas id="myLineChart" class="col sm-12-12" width="400" height="200"></canvas>
-                        <!-- <img src="http://placehold.it/800x350" alt="line graph"> -->
+
                     </section>
 
                     <!-- BAR GRAPH DAILY TRAFFIC SECTION -->
                     <section class="line-chart-traffic-container thin-section-border col-no-bottom-margin col sm-col-12-12 lg-col-6-12">
                         <h3 class="section-title">Daily Traffic</h3>
-                        <!-- bar graph chart.js here -->
+
                         <canvas id="myBarChart" width="300" height="150"></canvas>
-                        <!-- Placehold.it img -->
-                        <!-- <img src="http://placehold.it/400x350" alt="line graph"> -->
+
                     </section>
 
                     <!-- DOUGHNUT GRAPH MOBILE USERS SECTION -->
                     <section class="line-chart-traffic-container thin-section-border col-no-bottom-margin col sm-col-12-12 lg-col-6-12">
                         <h3 class="section-title">Mobile Users</h3>
-                        <!-- doughnut graph chart.js here -->
+
                         <canvas id="myPieChart" width="300" height="150"></canvas>
-                        <!-- Placehold.it img -->
-                        <!-- <img src="http://placehold.it/400x350" alt="line graph"> -->
+
                     </section>
                 </div>
                 <!-- .section -->
@@ -414,7 +410,7 @@
                         <form class="form-contact-user" autocomplete="on" method="post">
                             <!-- Confimation Modal -->
                             <div class="form-confirm-msg">
-                                <!-- <p>Your Msg to <br/><strong>Kris Osborne</strong><br/> has been sent!</p> -->
+
                             </div>
                             <h3 class="section-title form-title">Message User</h3>
 

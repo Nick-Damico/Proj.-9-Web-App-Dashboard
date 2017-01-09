@@ -269,13 +269,17 @@ APP PRIMARY NAVIGATION
  .navigation-list li:hover, .navigation-list li:focus {
      border-color: #76bf7a;
  }
+
+
+
  /*****************************************
 MAIN CONTENT
 *****************************************/
 
  .section-title {
-     font-weight: 100;
+     font-weight: 500;
      padding-top: 1.6%;
+     margin-bottom: 1.2rem;
  }
 
  .main-container {
@@ -312,15 +316,19 @@ ALERT SECTION
 **********************/
 
  .user-alert-container {
-     position: relative;
-     margin: 1.6% 1.6%;
-     letter-spacing: 1px;
-     color: #f2f2f2;
-     border-radius: 5px;
-     background: #5e62b3;
-     font-size: 12px;
-     font-weight: 100;
-     /*width: 95%;*/
+    padding-right: 1.6%;
+ }
+
+ .user-alert-message {
+  background: #5e62b3;
+  color: #f2f2f2;
+  border-radius: 5px;
+  position: relative;
+  padding: 1.2rem 1rem;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 100;
+  width: 100%;
  }
 
  .user-alert-container .close-alert {
@@ -336,8 +344,7 @@ ALERT SECTION
     border-radius: 50%;
     font-size: 1.25rem;
     line-height: 1.38rem;
-    padding-left: 2px;
-    /* padding-bottom: 1px; */
+    padding-left: 2px;  
     font-weight: 500;
     transition: transform .4s;
  }
@@ -347,8 +354,8 @@ ALERT SECTION
    transform: scale(1.1) translateY(-5px);
  }
 
- .user-alert-container>p {
-     margin: 0 0;
+ .user-alert-container > p {
+     margin: 1% 0;
      padding-right: 8px;
  }
 
@@ -369,23 +376,40 @@ GRAPHS
 
 /* Traffic Nav */
 
-.nav-traffic-container {
-
-}
 .nav-traffic-widget {
-   padding-top: 1.6%;
+  padding-top: 1.6%;
+  width:100%;
+  text-align: center;
  }
 
  .nav-traffic-widget li {
-   float: left;
-   color: #fff;
+   display: inline-block;
+   /*color: #000;*/
    border-radius: 1rem;
-   background: rgba(118, 191, 122, 1);
+   font-size: .725rem;
    margin: 0 1%;
+   transition: background .8s ease-in-out,
+               color .8s ease-in-out;
+ }
+
+ .nav-traffic-widget li:hover,
+ .nav-traffic-widget li:active {
+   background: rgba(118, 191, 122, 1);
+ }
+
+ .nav-traffic-widget li:hover a,
+ .nav-traffic-widget li:active a {
+   color: #fff;
+ }
+
+ .nav-traffic-widget li.selected {
+   background-color: rgba(118, 191, 122, 1);
+ }
+ .nav-traffic-widget li.selected a {
+   color: #fff;
  }
 
  .nav-traffic-widget li a {
-   color: #fff;
    padding: 5px 10px;
  }
 
@@ -742,5 +766,15 @@ MEDIA QUERIES
      }
      .hr {
          display: none;
+     }
+
+     /**********************
+    GRAPHS
+    **********************/
+
+    /* Traffic widget nav */
+
+     .nav-traffic-widget {
+       text-align: right;
      }
  }

@@ -1,3 +1,13 @@
+// Author: Nicholas D'Amico
+// Contact: nickalan82@icloud.com
+// Checked project in: Chorme 54.0.02840.71, FireFox 50.0 & 49.0.1, safari 10.0.1
+// Treehouse Project 9: Web App Dashboard
+
+// ToDo:
+  // 1. Add message response to users click on 'save' btn in settings widget.
+  // 2. refactor Alert Msg.
+
+
 // iife function
 $(function() {
 
@@ -6,7 +16,7 @@ $(function() {
     /////////////////////////////////////////////////////
 
     //  Alert Notification Close Btn.
-    var $alertCloseBtn = $(".close-alert");
+
     // Line Chart Canvas El.
     var Linectx = document.getElementById('myLineChart').getContext("2d");
     // Bar Chart Canvas El.
@@ -15,6 +25,9 @@ $(function() {
     var Piectx = document.getElementById('myPieChart').getContext("2d");
     //  Hides Modal window on load.
     $(".form-confirm-msg").hide();
+
+
+
 
     //  input type="checkbox" #emailNotification
     var $emailCheckbox = $('#emailNotification');
@@ -39,13 +52,61 @@ $(function() {
 
     //  Sets Select option for users time zone in localStorage
     // if localStorage.timeZone is 'undefined', select defaults to '<option>Select timeZone'
-    function usersTimeZone(usersTime) {
+    function usersTimeZone( usersTime ) {
         $('#timezone-select option').each(function() {
             if ($(this).attr('value') === usersTime) {
                 $(this).attr("selected", "true");
             }
         });
     }
+
+    /////////////////////////////////////////////////////
+    //  Notification Alert
+    /////////////////////////////////////////////////////
+
+
+    var alertMsgs = [
+      {
+        msg : 'You have 2 New Likes on Your recent post',
+      },
+      {
+        msg : 'You have a New Message from Ryan Carson',
+      }
+    ];
+
+    // REMOVES ALERT MSG FROM PAGE ON CLICK
+    $(document).on('click', '.close-alert', function() {
+        $this = $(this);
+        $this.parent().fadeOut(1000);
+    });
+
+    function AlertMsgBuilder() {
+
+
+    }
+
+    $('#alertLink').on('click', function(e) {
+      var $userAlertBox = $('.user-alert-inner-container');
+      $userAlertBox.show();
+      var msg = '';
+      for( var i = 0; i < alertMsgs.length; i++ ) {
+        if( alertMsgs[i].msg !== "" ) {
+        msg += '';
+        msg += '<p class="user-alert-message">';
+        msg += '<strong>Alert </strong>';
+        msg += alertMsgs[i].msg + '!';
+        msg += '<span class="close-alert">x</span>';
+        msg += '</p>';
+        $userAlertBox.append(msg);
+        msg = "";
+        alertMsgs[i].msg = "";
+        }
+      }
+    });
+
+    /////////////////////////////////////////////////////
+    //
+    /////////////////////////////////////////////////////
 
 
 
@@ -170,16 +231,7 @@ $(function() {
 
 
 
-    /////////////////////////////////////////////////////
-    // Notification Alert
-    /////////////////////////////////////////////////////
 
-    // REMOVES ALERT MSG FROM PAGE ON CLICK
-    $alertCloseBtn.on('click', function() {
-        $this = $(this);
-        elGreatGrandparent = $this.parent().parent().parent();
-        elGreatGrandparent.fadeOut(1500);
-    });
 
     //  ADD LIGHT TO BELL.SVG ICON IF THERE ARE MSGS.
 
@@ -212,7 +264,9 @@ $(function() {
             //  clear textarea input.
             $msgUser.val("");
         } else {
-            msg += '<p>Please Complete the form with a<br/> <strong>User Name</strong> and <strong>Message</strong></p>';
+            msg += '<p>Please Complete the form with a';
+            msg += '<br/> <strong>User Name</strong>';
+            msg += 'and <strong>Message</strong></p>';
             displayModal(msg);
         }
         //  clear msg
@@ -228,17 +282,26 @@ $(function() {
     //  Check for localStorage Browser support
     if (typeof(Storage) !== "undefined") {
 
+        //  Sets users time zone from 'save' button.
+        usersTimeZone(localStorage.timeZone);
+
         //  On load checks users localStorage settings
-        //  Setting prefernces if available.
+        //  Applies Users settings from 'save' button.
         if (localStorage.emailSetting === "on") {
+            // Function call turns 'Send email Notifications' to 'on'.
             setEmailPref(localStorage.emailSetting);
         }
 
         if (localStorage.profileSetting === "on") {
+            // Function call turns 'Set Profile to Public' to 'on'.
             setProfilePrivacy(localStorage.profileSetting);
         }
 
-        usersTimeZone(localStorage.timeZone);
+        ////////////////////////////////////////////
+        //  Functions for Settings Widget
+        //  Functions called on 'save' button click.
+        //  Function called on page load if localStorage settings = 'on'.
+        ////////////////////////////////////////////
 
 
         function setEmailPref(usersEmailPref) {
@@ -255,30 +318,27 @@ $(function() {
 
         function usersEmailPref() {
 
-            if ($emailCheckbox.is(':checked')) {
+            if ( $emailCheckbox.is(':checked') ) {
                 localStorage.emailSetting = "on";
-                console.log("on");
             } else {
                 localStorage.emailSetting = "off";
-                console.log("off");
             }
 
         }
 
         function usersProfilePref() {
 
-            if ($privacyCheckbox.is(':checked')) {
+            if ( $privacyCheckbox.is(':checked') ) {
                 localStorage.profileSetting = "on";
-                console.log("on");
             } else {
                 localStorage.profileSetting = "off";
-                console.log("off");
             }
 
         }
 
         ////////////////////////////////////////////
         // EVENT CLICK HANDLER FOR SETTINGS WIDGET
+        //  Save Button Function
         ////////////////////////////////////////////
 
         // Save App Sets 'click' Event
@@ -286,8 +346,7 @@ $(function() {
             //  Store users time zone selection
             localStorage.setItem("timeZone", $("#timezone-select").val());
 
-            var usersTime = localStorage.timeZone;
-            usersTimeZone(usersTime);
+            usersTimeZone( localStorage.timeZone );
 
             usersEmailPref();
 
@@ -300,7 +359,6 @@ $(function() {
     }
 
     //  Switches
-
     $('#emailSwitch').on('change', function(e) {
 
     });
@@ -308,11 +366,6 @@ $(function() {
     $('#privacySwitch').on('click', function(e) {
 
     });
-
-    //  Checks for users timezone in local Storage.
-
-
-
 
 });
 //  End of iife function
