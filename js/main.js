@@ -305,12 +305,14 @@ $(function() {
         function setEmailPref(usersEmailPref) {
             if (usersEmailPref) {
                 $emailCheckbox.attr("checked", true);
+                $('#emailOffSwitch').hide();
             }
         }
 
         function setProfilePrivacy(usersProfilePref) {
             if (usersProfilePref) {
                 $privacyCheckbox.attr("checked", true);
+                $('#profileOffSwitch').hide();
             }
         }
 
