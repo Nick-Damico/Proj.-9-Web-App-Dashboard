@@ -360,6 +360,7 @@ GRAPHS
  .line-chart-traffic-container:nth-child(2) {
      border-right: 1px solid #e6e6e6;
  }
+
  /* Traffic Nav */
 
  .nav-traffic-widget {
@@ -758,15 +759,17 @@ MEDIA QUERIES
          display: -webkit-box;
          display: -ms-flexbox;
          display: flex;
-         margin-top: 1rem;
+         -ms-flex-item-align: center;
+         align-self: center;
+         justify-content: center;
+         width: 100%;
+         margin-top: .25rem;
          margin-bottom: 1em;
-         /* 10px / 14px */
-         margin-left: 1px;
+         padding-top: 4px;
+         /* change border bottom to left
+         on wide viewports */
          border-bottom: 0;
          border-left: 4px solid #3b3a5f;
-         /*float: left;*/
-         -ms-flex-item-align: center;
-             align-self: center;
      }
 
      /* SOCIAL STATS AREA */

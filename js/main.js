@@ -1,6 +1,6 @@
 // Author: Nicholas D"Amico
 // Contact: nickalan82@icloud.com
-// Checked project in: Chorme 54.0.02840.71, FireFox 50.0 & 49.0.1, safari 10.0.1
+// Checked project in: Chorme 55 64-bit, FireFox 50 & 49.0.1, safari 10.0.2
 // Treehouse Project 9: Web App Dashboard
 
 // jQuery Ready();
@@ -177,7 +177,7 @@ $(function() {
     var myBarChart = new Chart(Barctx, {
         type: "bar",
         data: {
-            labels: ["S", "M", "T", "W", "T", "F", "S"],
+            labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
             datasets: [
               {
                 label: "Desktop Users",
@@ -207,9 +207,9 @@ $(function() {
     var myPieChart = new Chart(Piectx, {
         type: "doughnut",
         data: {
-            labels: ["Desktop", "Phones", "Tablets", "Consoles"],
+            labels: ["iPhone", "Android", "Tablets", "Consoles"],
             datasets: [{
-                data: [7798, 10828, 5420, 3425],
+                data: [10828, 7798, 5420, 3425],
                 backgroundColor: [
                     "rgba(90, 93, 167, 1)",
                     "rgba(101, 162, 178, 1)",
