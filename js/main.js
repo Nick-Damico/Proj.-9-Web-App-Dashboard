@@ -103,40 +103,49 @@ $(function() {
     /////////////////////////////////////////////////////
 
     //  HOURLY TRAFFIC CHART
-    var hourlyChartData =  [20, 200, 425, 850, 1000, 750, 200, 800, 583, 1203, 1101, 2502];
+    var hourlyChartData = [80, 20, 135, 550, 1000, 1150, 900, 1100, 1183, 903, 801, 502, 420];
+    var hourlyLabelData = ["1-2am", "3-4am", "5-6am", "7-8am", "9-10am", "10-11am", "12-13pm", "14-15pm", "16-17pm", "18-19pm", "20-21pm", "22-24am" ];
 
     //  DAILY TRAFFIC CHART
     var dailyChartData =  [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2000, 1750, 2250];
+    var dailyLabelData = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
 
     //  WEEKLY CHART DATA
     var weeklyChartData = [1750, 2250, 2000, 2500, 3000, 4500, 5750, 4250, 6750, 4000, 3750, 4250];
+    var weeklyLabelData = ["1-4wks", "5-9wks", "10-14wks", "15-19wks", "20-24wks", "25-29wks", "30-34wks", "35-39wks", "40-44wks", "45-59wks", "50-52wks"];
 
     //  MONTHLY CHART DATA
     var monthlyChartData = [10750, 21250, 21000, 12500, 13000, 14500, 15750, 14250, 16750, 14000, 13750, 14250];
+    var monthlyLabelData = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 
     //  CLICK EVENTS FOR TRAFFIC DATA
     $("#hourlyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = hourlyChartData;
+      myChart.data.labels = hourlyLabelData;
       myChart.update();
+
     });
 
     $("#dailyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = dailyChartData;
+      myChart.data.labels = dailyLabelData;
       myChart.update();
     });
 
     $("#weeklyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = weeklyChartData;
+      myChart.data.labels = weeklyLabelData;
       myChart.update();
     });
 
     $("#monthlyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = monthlyChartData;
+      myChart.data.labels = monthlyLabelData;
       myChart.update();
     });
 
@@ -147,7 +156,7 @@ $(function() {
     var myChart = new Chart(Linectx, {
         type: "line",
         data: {
-            labels: ["16-22", "22-39", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+            labels: hourlyLabelData,
             datasets: [{
                 data: hourlyChartData, // DATA UPDATE ON CLICK EVENTS
                 lineTension: 0,
