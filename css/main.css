@@ -565,7 +565,7 @@ Form Message User / Form App Settings
      color: #f7f7f7;
      border: 2px solid #5e62b3;
      border-radius: 10px;
-     background: #65a2b2;
+     background: rgba(59, 58, 95, .75);
      font-size: 1.1rem;
      font-weight: 300;
  }
