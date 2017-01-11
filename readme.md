@@ -1,6 +1,9 @@
 // Author: Nicholas D"Amico
 // Contact: nickalan82@icloud.com
-// Checked project in: Chorme 54.0.02840.71, FireFox 50.0 & 49.0.1, safari 10.0.1
+// Checked project in:
+  - Chorme 55 65-bit,
+  - FireFox 50.0 & 49.0.1,
+  - safari 10.0.2
 // Treehouse Project 9: Web App Dashboard
 
 ** Treehouse | Front End Techdegree Project: 9 Web Application Dashboard **
