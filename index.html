@@ -7,6 +7,7 @@
 
     <title>Project 9: Web App Dashboard</title>
     <meta content="Treehouse Front End Techdegree Project 9 Web App Dashboard" name="description">
+    <meta name="author" content="Nicholas D'Amico | nickalan82@icloud.com">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- Font Links -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,500,700" rel="stylesheet">
@@ -398,12 +399,10 @@
             <div class="section cf">
                 <div class="message-user-container thin-section-border col sm-col-12-12 lg-col-6-12">
                     <form autocomplete="on" class="form-contact-user" method="post">
+
                         <!-- Confimation Modal -->
-
-
                         <div class="form-confirm-msg">
                         </div>
-
 
                         <h3 class="section-title form-title">Message User</h3>
                         <input class="input-element user-search thin-border form-text-style" id="userSearch" name="user-search" placeholder="Search for User" required="" type="search">
@@ -418,6 +417,9 @@
                 <div class="app-settings-container thin-section-border col sm-col-12-12 lg-col-6-12">
                     <h3 class="section-title form-title">Settings</h3>
 
+                    <!-- Save Confimation Modal -->
+                     <div class="save-confirm-msg">                    
+                    </div>
 
                     <div class="option-container">
                         <span class="settings-info form-text-style">Send Email Notifications</span> <label class="switch" onclick=""><input id="emailNotification" name="email-switch" type="checkbox"> <span class="slider round"><span class="on-state">On</span> <span id="emailOffSwitch" class="off-state email-off-switch">Off</span></span></label>
@@ -565,7 +567,9 @@
             </select>
                     </div>
                     <!-- .option-container -->
-                    <button class="settings-btn save-btn btn form-text-style" id="saveBtn">Save</button> <button class="settings-btn close-btn btn form-text-style">Cancel</button>
+                    <button class="settings-btn save-btn btn form-text-style" id="saveBtn">Save</button> <button class="settings-btn cancel-btn btn form-text-style">Cancel</button>
+                    <!-- modal display container on save btn click -->
+
                 </div>
                 <!-- .app-settings-container -->
             </div>
