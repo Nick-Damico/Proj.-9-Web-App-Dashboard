@@ -7,6 +7,7 @@
 // Treehouse Project 9: Web App Dashboard
 
 ** Treehouse | Front End Techdegree Project: 9 Web Application Dashboard **
+ https://nick-damico.github.io/Proj.-9-Web-App-Dashboard/
 
 Objective: Take the provided Design and SVG icons and build web dashboard
 complete with JavaScript-driven charts and Graphs. No backend required.
