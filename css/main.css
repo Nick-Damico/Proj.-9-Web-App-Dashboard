@@ -549,12 +549,14 @@ Form Message User / Form App Settings
      border-right: 1px solid #e6e6e6;
  }
 
- .form-contact-user {
+ .form-contact-user,
+ .app-settings-container {
      position: relative;
  }
  /* FORM CONFIRM MODAL */
 
- .form-confirm-msg {
+ .form-confirm-msg,
+ .save-confirm-msg {
      position: absolute;
      top: 20px;
      left: 20px;
@@ -568,6 +570,13 @@ Form Message User / Form App Settings
      background: rgba(59, 58, 95, .75);
      font-size: 1.1rem;
      font-weight: 300;
+     z-index: 300;
+ }
+
+ .save-confirm-msg {
+    top: 50px;
+    line-height: 60px;
+    height: 28%;
  }
  /* End of Confirm modal */
 
@@ -585,7 +594,7 @@ Form Message User / Form App Settings
  .input-element {
      width: 100%;
      margin-bottom: 1em;
-     padding: .5rem .75rem;
+     padding: .55rem .75rem;
      border-radius: 5px;
      background-color: #f7f7f7;
  }
@@ -602,22 +611,24 @@ Form Message User / Form App Settings
      text-transform: uppercase;
      color: #ffffff;
      border: none;
+     border-bottom: 5px solid #3b3a5f;
      border-radius: 4px;
      background: #5e62b3;
+     transition: transform .3s ease-in;
  }
 
- .btn:hover {
+ .btn:hover,
+ .btn:active {
      text-decoration: none;
-     background: #5e62b3;
-     background-image: -webkit-linear-gradient(top, #5e62b3, #7c7eb3);
-     background-image: linear-gradient(to bottom, #5e62b3, #7c7eb3);
+     transform: translateY(-3px);
  }
 
  .submit-btn, .settings-btn {
+    height: 48px;
      width: 100%;
  }
 
- .close-btn {
+ .cancel-btn {
      background: #a7a7a7;
  }
 
