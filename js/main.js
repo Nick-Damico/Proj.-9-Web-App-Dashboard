@@ -20,6 +20,7 @@ $(function() {
     var Piectx = document.getElementById("myPieChart").getContext("2d");
     //  Hides Modal window on load.
     $(".form-confirm-msg").hide();
+    $(".save-confirm-msg").hide();
 
 
 
@@ -35,8 +36,8 @@ $(function() {
     /////////////////////////////////////////////////////
 
     //  Appends msg to Modal and displays over 2000ms to user once send is "clicked".
-    function displayModal(msg) {
-        var $container = $(".form-confirm-msg");
+    function displayModal(msg, location) {
+        var $container = location;
         $container.prepend(msg)
             .fadeIn()
             .delay(2500)
@@ -51,7 +52,7 @@ $(function() {
         $("#timezone-select option").each(function() {
             if ($(this).attr("value") === usersTime) {
                 $(this).attr("selected", "true");
-            }
+            } 
         });
     }
 
@@ -119,7 +120,7 @@ $(function() {
     var monthlyLabelData = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 
-    //  CLICK EVENTS FOR TRAFFIC DATA
+    // Updates Graph to hourly labels & data on click.
     $("#hourlyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = hourlyChartData;
@@ -128,6 +129,7 @@ $(function() {
 
     });
 
+    // Updates Graph to daily labels & data on click.
     $("#dailyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = dailyChartData;
@@ -135,6 +137,7 @@ $(function() {
       myChart.update();
     });
 
+    // Updates Graph to weekly labels & data on click.
     $("#weeklyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = weeklyChartData;
@@ -142,6 +145,7 @@ $(function() {
       myChart.update();
     });
 
+    // Updates Graph to monthly labels & data on click.
     $("#monthlyData").on("click", function(e) {
       e.preventDefault();
       myChart.data.datasets[0].data = monthlyChartData;
@@ -251,12 +255,14 @@ $(function() {
         // Stop Submit page refresh on click.
         e.preventDefault();
 
-        // Variables for input fields
+        // Variables for input element fields
         var $userInput = $("#userSearch");
         var $msgUser = $("#msgToUser");
+        //  msg display location
+        var $msgLocation = $(".form-confirm-msg");
         //  Build msg for modal.
         var msg = "";
-        //  Check if either input fields are empty.
+        //  Check if either input fields are Not empty.
         if ($msgUser.val() !== "" && $userInput.val() !== "") {
             // Get Msg recipent Name
             var user = $userInput.val();
@@ -274,7 +280,7 @@ $(function() {
             msg += "<p>Please Complete the form with a ";
             msg += "<br/><strong>User Name</strong>";
             msg += " and <strong>Message</strong></p>";
-            displayModal(msg);
+            displayModal(msg, $msgLocation);
         }
         //  clear msg
         msg = "";
@@ -360,6 +366,33 @@ $(function() {
             usersEmailPref();
 
             usersProfilePref();
+            //  Message to confirm saved settings to user.
+            var msg = "Settings Saved.";
+            var location = $(".save-confirm-msg");
+            displayModal(msg, location);
+        });
+
+        $(".cancel-btn").on("click", function(e) {
+            
+            //  Remove :checked attr from slider btns
+            $('input[type="checkbox"]').attr('checked', false);
+
+            //  Show <span>off</span> on slider btn
+            $('.off-state').show();
+
+            //  Save 'off' state to localStorage for btns
+            usersEmailPref();
+            usersProfilePref();
+
+            //  Confirm cancel settings
+            var msg = "Cancelled Settings";
+            var $location = $(".save-confirm-msg");
+            //  Reset timezone select
+            usersTimeZone("none");
+            //  Display confirm cancel msg
+            displayModal(msg, $location);
+
+            
         });
 
 
