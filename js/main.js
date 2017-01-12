@@ -271,7 +271,7 @@ $(function() {
             msg += user + " </strong><br/>";
             msg += "has been sent!";
             //  Display msg in modal.
-            displayModal(msg);
+            displayModal(msg, $msgLocation);
             //  clear user name input
             $userInput.val("");
             //  clear textarea input.
@@ -372,6 +372,7 @@ $(function() {
             displayModal(msg, location);
         });
 
+        // Cancel App Sets "click" Event
         $(".cancel-btn").on("click", function(e) {
             
             //  Remove :checked attr from slider btns
