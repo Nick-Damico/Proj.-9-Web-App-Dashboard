@@ -52,7 +52,7 @@ $(function() {
         $("#timezone-select option").each(function() {
             if ($(this).attr("value") === usersTime) {
                 $(this).attr("selected", "true");
-            } 
+            }
         });
     }
 
@@ -71,7 +71,7 @@ $(function() {
     ];
 
     // REMOVES ALERT MSG FROM PAGE ON CLICK
-    $(document).on("click", ".close-alert", function() {
+    $(document).on("click tap", ".close-alert", function() {
         $this = $(this);
         $this.parent().fadeOut(1000);
     });
@@ -374,7 +374,7 @@ $(function() {
 
         // Cancel App Sets "click" Event
         $(".cancel-btn").on("click", function(e) {
-            
+
             //  Remove :checked attr from slider btns
             $('input[type="checkbox"]').attr('checked', false);
 
@@ -393,7 +393,7 @@ $(function() {
             //  Display confirm cancel msg
             displayModal(msg, $location);
 
-            
+
         });
 
 
