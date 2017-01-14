@@ -35,6 +35,10 @@
      width: 32px;
  }
 
+ textarea {
+   resize: none;
+ }
+
 
 
 
