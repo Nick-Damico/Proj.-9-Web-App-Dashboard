@@ -71,7 +71,7 @@ $(function() {
     ];
 
     // REMOVES ALERT MSG FROM PAGE ON CLICK
-    $(document).on("click tap", ".close-alert", function() {
+    $(document).on("click tap touchstart", ".close-alert", function() {
         $this = $(this);
         $this.parent().fadeOut(1000);
     });
@@ -121,7 +121,7 @@ $(function() {
 
     //  Removes class 'selected' from li items, adds 'selected' to clicked li.
     $('ul.nav-traffic-widget').on('click', 'li', function() {
-      $('ul.nav-traffic-widget li').removeClass("selected");
+      $('ul.nav-traffic-widget li.selected').removeClass("selected");
       $(this).addClass("selected");
     });
 
