@@ -119,6 +119,11 @@ $(function() {
     var monthlyChartData = [10750, 21250, 21000, 12500, 13000, 14500, 15750, 14250, 16750, 14000, 13750, 14250];
     var monthlyLabelData = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
+    //  Removes class 'selected' from li items, adds 'selected' to clicked li.
+    $('ul.nav-traffic-widget').on('click', 'li', function() {
+      $('ul.nav-traffic-widget li').removeClass("selected");
+      $(this).addClass("selected");
+    });
 
     // Updates Graph to hourly labels & data on click.
     $("#hourlyData").on("click", function(e) {
