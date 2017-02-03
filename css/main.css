@@ -188,6 +188,7 @@ HEADER
  .header-nav {
      float: right;
      padding-top: .25em;
+     position: relative;
  }
 
  .header-nav li {
@@ -215,9 +216,23 @@ HEADER
      border-radius: 50%;
  }
 
-
-
+.alert-bell-icon{
+    position: relative;
+}
+.header-nav.on li:first-child a::before{
+    content: "";
+    background: #76bf7a;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+}
  /*****************************************
+}
+}
+}
 APP PRIMARY NAVIGATION
 *****************************************/
 
