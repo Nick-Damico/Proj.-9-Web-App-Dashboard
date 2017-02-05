@@ -219,7 +219,7 @@ HEADER
 .alert-bell-icon{
     position: relative;
 }
-.header-nav.on li:first-child a::before{
+.header-nav li:first-child a.on::before{
     content: "";
     background: #76bf7a;
     width: 6px;
@@ -230,9 +230,6 @@ HEADER
     left: 6px;
 }
  /*****************************************
-}
-}
-}
 APP PRIMARY NAVIGATION
 *****************************************/
 
@@ -269,7 +266,7 @@ APP PRIMARY NAVIGATION
      border-bottom: 4px solid #3b3a5f;
  }
 
- .navigation-list li:hover, .navigation-list li:focus {
+ .navigation-list li:hover, .navigation-list li:focus, .navigation-list li.selected {
      border-color: #76bf7a;
  }
 
