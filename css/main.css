@@ -219,7 +219,7 @@ HEADER
 .alert-bell-icon{
     position: relative;
 }
-.header-nav li:first-child a.on::before{
+.on::before{
     content: "";
     background: #76bf7a;
     width: 6px;

@@ -80,6 +80,8 @@ $(function() {
       var $userAlertBox = $(".user-alert-inner-container");
       $userAlertBox.show();
       var msg = "";
+      //   Removes green light from alert bell icon.
+      $(this).parent().removeClass("on");
       for( var i = 0; i < alertMsgs.length; i++ ) {
         if( alertMsgs[i].msg !== "" ) {
         msg += "";
