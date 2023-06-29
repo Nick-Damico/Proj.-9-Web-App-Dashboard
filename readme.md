@@ -1,25 +1,35 @@
-// Author: Nicholas D'Amico
-// Contact: nickalan82@icloud.com
-// Checked project in:
-  - Chorme 55 64-bit,
-  - FireFox 50.0 & 49.0.1,
-  - safari 10.0.2
-// Treehouse Project 9: Web App Dashboard
+# Web App Dashboard
 
-** Treehouse | Front End Techdegree Project: 9 Web Application Dashboard **
- https://nick-damico.github.io/Proj.-9-Web-App-Dashboard/
+# Overview
 
-Objective: Take the provided Design and SVG icons and build web dashboard
-complete with JavaScript-driven charts and Graphs. No backend required.
+This project was completed as part of the Treehouse Front End Techdegree program, specifically Project 9: Web Application Dashboard. The objective of this project was to create a web dashboard with JavaScript-driven charts and graphs using the provided design and SVG icons.
 
-Description: Many websites do more than just give you information. Sites like GitHub, Zillow, Mint and Treehouse let users do things. They act like programs you run on your computer. These web applications, often include pages for looking at your profile, what you've done in the week or what you need to get done. These "dashboards" act like your control panel for controlling the web app.
+# Project Objective
 
-In this project, you'll take a mockup and a few icons and build a beautiful, web dashboard complete with JavaScript-driven charts and graphs. You only need to take the design and create the HTML, CSS and JavaScript functionality for this one page -- you don't need to create other pages, or build any backend or database functionality.
+Build a web dashboard with JavaScript-driven charts and graphs based on the provided design.
+No backend or database functionality is required for this project.
+The focus is on creating the HTML, CSS, and JavaScript functionality for a single-page dashboard.
 
-* Tools used to build :
-** HTML
-** CSS
-** GIT / Command Line
-** jQuery
-** chart.js
-** SVG
+# Technologies
+
+HTML
+CSS
+GIT / Command Line
+jQuery
+chart.js
+SVG
+
+# Getting Started
+
+To explore the Web App Dashboard, simply open the HTML file in your preferred web browser. No additional setup or installation is required.
+
+# Demo
+
+You can see a live demo of this project by visiting the following link:
+[Web App Dashboard](https://nick-damico.github.io/Proj.-9-Web-App-Dashboard/)
+
+Feel free to browse through the dashboard, interact with the charts and graphs, and explore the functionality implemented.
+
+For any inquiries or feedback, please reach out via the provided contact email.
+
+Happy exploring!
