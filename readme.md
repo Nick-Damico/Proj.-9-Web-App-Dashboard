@@ -23,6 +23,9 @@ The focus is on creating the HTML, CSS, and JavaScript functionality for a singl
 
 To explore the Web App Dashboard, simply open the HTML file in your preferred web browser. No additional setup or installation is required.
 
+# Screenshot
+![Web App Dashboard](https://github.com/Nick-Damico/Proj.-9-Web-App-Dashboard/assets/19657584/36c70c6d-334a-4d69-be1d-1313767fdbb8)
+
 # Demo
 
 You can see a live demo of this project by visiting the following link:
