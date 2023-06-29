@@ -12,12 +12,12 @@ The focus is on creating the HTML, CSS, and JavaScript functionality for a singl
 
 # Technologies
 
-HTML
-CSS
-GIT / Command Line
-jQuery
-chart.js
-SVG
+- HTML
+- CSS
+- GIT
+- jQuery
+- Charts.js
+- SVGs
 
 # Getting Started
 
